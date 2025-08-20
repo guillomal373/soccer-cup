@@ -12,14 +12,14 @@
     <!-- NAV -->
     <nav class="nav" aria-label="Principal">
       <ul class="nav-list">
-        <li><a href="index.html#about">Acerca</a></li>
+        <!-- <li><a href="index.html#about">Acerca</a></li> -->
         <li><a href="index.html#teams">Equipos</a></li>
         <li><a href="index.html#matches">Partidos</a></li>
         <li><a href="index.html#standings">Posiciones</a></li>
-        <li><a href="index.html#stats">Estadísticas</a></li>
-        <li><a href="index.html#gallery">Galería</a></li>
-        <li><a href="index.html#news">Noticias</a></li>
-        <li><a href="index.html#sponsors">Patrocinadores</a></li>
+        <!-- <li><a href="index.html#stats">Estadísticas</a></li> -->
+        <!-- <li><a href="index.html#gallery">Galería</a></li> -->
+        <!-- <li><a href="index.html#news">Noticias</a></li> -->
+        <!-- <li><a href="index.html#sponsors">Patrocinadores</a></li> -->
       </ul>
       <a href="#" style="color:#fff;text-decoration:none;font-weight:700;">Login</a>
     </nav>
@@ -33,19 +33,19 @@
         <div class="hero-sub">TABLE OF STANDINGS</div>
 
         <!-- Métricas -->
-        <div class="metrics" role="list">
-          <article class="card" role="listitem">
-            <div class="big">8</div>
+  <ul class="metrics">
+          <li class="card">
+            <div class="big" id="teams-count">8</div>
             <div class="label">Teams</div>
-          </article>
-          <article class="card" role="listitem">
-            <div class="big">20</div>
+          </li>
+          <li class="card">
+            <div class="big" id="matches-count">20</div>
             <div class="label">Matches</div>
-          </article>
-          <article class="card" role="listitem">
-            <div class="big">1</div>
+          </li>
+          <li class="card">
+            <div class="big" id="month-count">1</div>
             <div class="label">Month</div>
-          </article>
+          </li>
         </div>
       </div>
       <figure class="hero-media" aria-label="Imagen del torneo"></figure>
@@ -56,7 +56,6 @@
       <h1 class="section-title">Información del Torneo</h1>
       <p class="section-sub">Descripción, lugar, fechas, formato, imagen del torneo y patrocinadores.</p>
     </header>
-
     <section class="info-wrap">
       <!-- Columna izquierda -->
       <article class="info-left">
@@ -86,7 +85,7 @@
       <aside class="info-right">
         <!-- Logo del torneo (SVG placeholder; reemplázalo por tu imagen si quieres) -->
         <div class="logo-wrap" aria-label="Logo del torneo">
-          <svg viewBox="0 0 220 220" width="180" height="180" role="img" aria-label="Balón de fútbol">
+          <img src="img/ball.png" alt="Balón de fútbol" width="180" height="180">
             <defs>
               <linearGradient id="g" x1="0" x2="1">
                 <stop offset="0" stop-color="#e9ffe9"/>
@@ -114,7 +113,7 @@
         <div class="sponsors">
           <h3>Patrocinadores</h3>
           <div class="sponsor-grid">
-            <!-- Logos de ejemplo en SVG; reemplaza por <img src="tulogoa.svg"> -->
+
             <svg viewBox="0 0 120 60" aria-label="Sponsor 1">
               <text x="10" y="38" font-size="24" font-weight="900" fill="#15422c">SPONSOR</text>
             </svg>
@@ -136,80 +135,15 @@
   <h1 class="section-title">Equipos</h1>
   <p class="section-sub">Tarjetas con logo, nombre y colores.</p>
 </header>
-
 <section class="teams-wrap">
-  <div class="team-grid">
-
-    <!-- EAGLES -->
-    <a class="team-card" href="equipo-eagles.html" aria-label="Eagles">
-      <div class="badge">
-        <img src="img/eagles.png" alt="Eagles logo">
-      </div>
-      <div class="team-meta">
-        <h3 class="team-name">Eagles</h3>
-        <span class="team-colors">
-          <i style="background:#165b3a"></i>
-          <i style="background:#21a36c"></i>
-          <i style="background:#ffffff"></i>
-        </span>
-      </div>
-    </a>
-
-    <!-- RAVENS -->
-    <a class="team-card" href="equipo-ravens.html" aria-label="Ravens">
-      <div class="badge">
-        <img src="img/ravens.png" alt="Ravens logo">
-      </div>
-      <div class="team-meta">
-        <h3 class="team-name">Ravens</h3>
-        <span class="team-colors">
-          <i style="background:#172a4a"></i>
-          <i style="background:#e63946"></i>
-          <i style="background:#ffffff"></i>
-        </span>
-      </div>
-    </a>
-
-    <!-- UNITED -->
-    <a class="team-card" href="equipo-united.html" aria-label="United">
-      <div class="badge">
-        <img src="img/united.png" alt="United logo">
-      </div>
-      <div class="team-meta">
-        <h3 class="team-name">United</h3>
-        <span class="team-colors">
-          <i style="background:#0b4f6c"></i>
-          <i style="background:#ffd166"></i>
-          <i style="background:#ffffff"></i>
-        </span>
-      </div>
-    </a>
-
-    <!-- SHARKS -->
-    <a class="team-card" href="equipo-sharks.html" aria-label="Sharks">
-      <div class="badge">
-        <img src="img/sharks.png" alt="Sharks logo">
-      </div>
-      <div class="team-meta">
-        <h3 class="team-name">Sharks</h3>
-        <span class="team-colors">
-          <i style="background:#064273"></i>
-          <i style="background:#53c7f0"></i>
-          <i style="background:#ffffff"></i>
-        </span>
-      </div>
-    </a>
-
-  </div>
+  <div class="team-grid" id="teams-container"></div>
 </section>
-
 
 <!-- ===================== CALENDARIO ===================== -->
 <header class="section-head" id="matches">
   <h1 class="section-title">Calendario de Partidos</h1>
   <p class="section-sub">Fecha, hora, estadio y VS con logos.</p>
 </header>
-
 <section class="calendar-wrap">
   <!-- Desktop: TABLE -->
   <table class="calendar calendar-table">
@@ -308,7 +242,6 @@
   <h1 class="section-title">Tabla de Posiciones</h1>
   <p class="section-sub">Ranking con PJ, PG, PE, PP, GF, GC, DG y Puntos.</p>
 </header>
-
 <section class="table-wrap">
   <!-- Desktop: TABLE -->
   <table class="standings standings-table">
@@ -392,11 +325,10 @@
   <h1 class="section-title">Estadísticas</h1>
   <p class="section-sub">Goleadores, tarjetas y portero menos vencido.</p>
 </header>
-
 <section class="stats-wrap">
   <!-- Tabs -->
   <div class="stats-tabs" role="tablist" aria-label="Tabs estadísticas">
-    <button class="tab is-active" data-tab="scorers" aria-selected="true">Goleadores</button>
+  <button class="tab is-active" data-tab="scorers">Goleadores</button>
     <button class="tab" data-tab="cards">Tarjetas</button>
     <button class="tab" data-tab="keepers">Portero menos vencido</button>
   </div>
@@ -461,14 +393,13 @@
   </div>
 </section>
 
+
 <!-- ===================== GALERÍA ===================== -->
-<header class="section-head" id="gallery">
+<!-- <header class="section-head" id="gallery">
   <h1 class="section-title">Galería</h1>
   <p class="section-sub">Fotos y videos del torneo.</p>
 </header>
-
-<section class="gallery-wrap">
-  <!-- Carrusel (scroll-snap) -->
+<section class="gallery-wrap"> 
   <div class="carousel" data-carousel>
     <button class="c-btn prev" aria-label="Anterior">‹</button>
     <div class="c-track">
@@ -476,21 +407,25 @@
       <figure class="c-item"><img src="img/gallery2.jpg" alt="Foto 2"><figcaption>Afición</figcaption></figure>
       <figure class="c-item"><img src="img/gallery3.jpg" alt="Foto 3"><figcaption>Atajada</figcaption></figure>
       <figure class="c-item video">
-        <video src="img/highlights.mp4" controls preload="metadata"></video>
+        <video src="img/highlights.mp4" controls preload="metadata">
+          <track kind="subtitles" src="img/highlights.vtt" srclang="es" label="Español">
+          <track kind="descriptions" src="img/highlights-desc.vtt" srclang="es" label="Descripción">
+        </video>
         <figcaption>Highlights</figcaption>
       </figure>
     </div>
     <button class="c-btn next" aria-label="Siguiente">›</button>
   </div>
-</section>
+</section> -->
+
 
 <!-- ===================== NOTICIAS & NOVEDADES ===================== -->
-<header class="section-head" id="news">
+<!-- <header class="section-head" id="news">
   <h1 class="section-title">Noticias y Novedades</h1>
   <p class="section-sub">Comunicados rápidos de la organización.</p>
 </header>
-
 <section class="news-wrap">
+  
   <article class="news-card">
     <time datetime="2025-06-18">18 Jun</time>
     <h3>Cambio de horario – Fecha 3</h3>
@@ -506,16 +441,15 @@
     <h3>Ingreso al estadio</h3>
     <p>Las puertas abren 60 minutos antes. Recuerda llevar documento de identidad.</p>
   </article>
-</section>
+</section> -->
+
 
 <!-- ===================== PATROCINADORES ===================== -->
-<header class="section-head" id="sponsors">
+<!-- <header class="section-head" id="sponsors">
   <h1 class="section-title">Patrocinadores</h1>
   <p class="section-sub">Aliados que hacen posible el torneo.</p>
 </header>
-
 <section class="sponsors-wrap">
-  <!-- carrusel simple (autoscroll CSS) -->
 <div class="sponsors-marquee">
   <div class="s-row">
     <a class="s-item"><img src="img/sponsor1.png" alt="Sponsor 1"></a>
@@ -523,81 +457,22 @@
     <a class="s-item"><img src="img/sponsor3.png" alt="Sponsor 3"></a>
     <a class="s-item"><img src="img/sponsor4.png" alt="Sponsor 4"></a>
     <a class="s-item"><img src="img/sponsor5.png" alt="Sponsor 5"></a>
-    <!-- duplicados -->
-    <a class="s-item"><img src="img/sponsor1.png" alt="Sponsor 1"></a>
-    <a class="s-item"><img src="img/sponsor2.png" alt="Sponsor 2"></a>
-    <a class="s-item"><img src="img/sponsor3.png" alt="Sponsor 3"></a>
-    <a class="s-item"><img src="img/sponsor4.png" alt="Sponsor 4"></a>
-    <a class="s-item"><img src="img/sponsor5.png" alt="Sponsor 5"></a>
   </div>
 </div>
-
-</section>
-
+</section> -->
 
 
-    <!-- FOOTER -->
-    <footer class="footer">© 2025 Torneo Regional de Fútbol</footer>
+<!-- FOOTER -->
+<footer class="footer">© 2025 Torneo Regional de Fútbol</footer>
 
-<script>
-(function(){
-  // Table (desktop)
-  document.querySelectorAll('.calendar-table tbody tr').forEach(row=>{
-    const score = row.getAttribute('data-score');
-    if(!score) return;
-    row.classList.add('played');
-    const [h,a] = score.split('-').map(n=>parseInt(n,10));
-    const homeEl = row.querySelector('.versus .team:first-child b');
-    const awayEl = row.querySelector('.versus .team:last-child  b');
-    if(Number.isFinite(h) && Number.isFinite(a)){
-      if(h>a) homeEl.classList.add('winner');
-      else if(a>h) awayEl.classList.add('winner');
-      else { homeEl.classList.add('draw'); awayEl.classList.add('draw'); }
-    }
-  });
+<script src="js/calendar-dynamic.js"></script>
+<script src="js/stats-tabs.js"></script>
+<script src="js/gallery-carousel.js"></script>
+<script src="js/teams.js"></script>
+<script src="js/summary.js"></script>
 
-  // Cards (mobile)
-  document.querySelectorAll('.match-card').forEach(card=>{
-    const score = card.getAttribute('data-score');
-    if(!score) return;
-    card.classList.add('played');
-    const [h,a] = score.split('-').map(n=>parseInt(n,10));
-    const homeEl = card.querySelector('.match-versus .team:first-child .name');
-    const awayEl = card.querySelector('.match-versus .team:last-child  .name');
-    if(Number.isFinite(h) && Number.isFinite(a)){
-      if(h>a) homeEl.classList.add('winner');
-      else if(a>h) awayEl.classList.add('winner');
-      else { homeEl.classList.add('draw'); awayEl.classList.add('draw'); }
-    }
-  });
-})();
-</script>
+</main>
 
-<script>
-/* ===== Tabs Estadísticas ===== */
-document.querySelectorAll('.stats-tabs .tab').forEach(btn=>{
-  btn.addEventListener('click', ()=>{
-    // activar botón
-    document.querySelectorAll('.stats-tabs .tab').forEach(b=>b.classList.remove('is-active'));
-    btn.classList.add('is-active');
-    // activar panel
-    const id = btn.dataset.tab;
-    document.querySelectorAll('.stats-panel').forEach(p=>{ p.hidden = true; p.classList.remove('is-active'); });
-    const panel = document.getElementById('panel-'+id);
-    if(panel){ panel.hidden = false; panel.classList.add('is-active'); }
-  });
-});
-
-/* ===== Carrusel Galería (botones) ===== */
-document.querySelectorAll('[data-carousel]').forEach(carousel=>{
-  const track = carousel.querySelector('.c-track');
-  carousel.querySelector('.prev').addEventListener('click', ()=> track.scrollBy({left:-360, behavior:'smooth'}));
-  carousel.querySelector('.next').addEventListener('click', ()=> track.scrollBy({left: 360, behavior:'smooth'}));
-});
-</script>
-
-
-  </main>
-
+  
 </body>
 </html>

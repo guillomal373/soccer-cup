@@ -1,0 +1,88 @@
+{
+  "teams": [
+    {
+      "id": "eagles",
+      "name": "Eagles1",
+      "logo": "img/eagles.png",
+        "colors": ["#165b3a", "#21a36c", "#ffffff"],
+        "players": [
+        {"id": "p01", "name": "Jugador 1", "position": "Delantero"},
+        {"id": "p02", "name": "Jugador 2", "position": "Defensa"},
+        {"id": "p03", "name": "Jugador 3", "position": "Portero"},
+        {"id": "p04", "name": "Jugador 4", "position": "Mediocampo"},
+        {"id": "p05", "name": "Jugador 5", "position": "Defensa"},
+        {"id": "p06", "name": "Jugador 6", "position": "Delantero"}
+      ]
+    },
+    {
+      "id": "ravens",
+      "name": "Ravens2",
+      "logo": "img/ravens.png",
+        "colors": ["#172a4a", "#e63946", "#ffffff"],
+        "players": [
+        {"id": "p07", "name": "Jugador 7", "position": "Delantero"},
+        {"id": "p08", "name": "Jugador 8", "position": "Defensa"},
+        {"id": "p09", "name": "Jugador 9", "position": "Portero"},
+        {"id": "p10", "name": "Jugador 10", "position": "Mediocampo"},
+        {"id": "p11", "name": "Jugador 11", "position": "Defensa"},
+        {"id": "p12", "name": "Jugador 12", "position": "Delantero"}
+      ]
+    },
+    {
+      "id": "sharks",
+      "name": "Sharks3",
+      "logo": "img/sharks.png",
+        "colors": ["#064273", "#53c7f0", "#ffffff"],
+        "players": [
+        {"id": "p13", "name": "Jugador 13", "position": "Delantero"},
+        {"id": "p14", "name": "Jugador 14", "position": "Defensa"},
+        {"id": "p15", "name": "Jugador 15", "position": "Portero"},
+        {"id": "p16", "name": "Jugador 16", "position": "Mediocampo"},
+        {"id": "p17", "name": "Jugador 17", "position": "Defensa"},
+        {"id": "p18", "name": "Jugador 18", "position": "Delantero"}
+      ]
+    },
+    {
+      "id": "united",
+      "name": "United4",
+      "logo": "img/united.png",
+        "colors": ["#0b4f6c", "#ffd166", "#ffffff"],
+        "players": [
+        {"id": "p19", "name": "Jugador 19", "position": "Delantero"},
+        {"id": "p20", "name": "Jugador 20", "position": "Defensa"},
+        {"id": "p21", "name": "Jugador 21", "position": "Portero"},
+        {"id": "p22", "name": "Jugador 22", "position": "Mediocampo"},
+        {"id": "p23", "name": "Jugador 23", "position": "Defensa"},
+        {"id": "p24", "name": "Jugador 24", "position": "Delantero"}
+      ]
+    },
+    {
+      "id": "sharks_",
+      "name": "Sharks_3",
+      "logo": "img/sharks.png",
+        "colors": ["#064273", "#53c7f0", "#ffffff"],
+        "players": [
+        {"id": "p13", "name": "Jugador 13", "position": "Delantero"},
+        {"id": "p14", "name": "Jugador 14", "position": "Defensa"},
+        {"id": "p15", "name": "Jugador 15", "position": "Portero"},
+        {"id": "p16", "name": "Jugador 16", "position": "Mediocampo"},
+        {"id": "p17", "name": "Jugador 17", "position": "Defensa"},
+        {"id": "p18", "name": "Jugador 18", "position": "Delantero"}
+      ]
+    },
+    {
+      "id": "united_",
+      "name": "United_4",
+      "logo": "img/united.png",
+        "colors": ["#0b4f6c", "#ffd166", "#ffffff"],
+        "players": [
+        {"id": "p19", "name": "Jugador 19", "position": "Delantero"},
+        {"id": "p20", "name": "Jugador 20", "position": "Defensa"},
+        {"id": "p21", "name": "Jugador 21", "position": "Portero"},
+        {"id": "p22", "name": "Jugador 22", "position": "Mediocampo"},
+        {"id": "p23", "name": "Jugador 23", "position": "Defensa"},
+        {"id": "p24", "name": "Jugador 24", "position": "Delantero"}
+      ]
+    }
+  ]
+}

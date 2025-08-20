@@ -1,0 +1,22 @@
+{
+  "matches": [
+    {
+      "id": "m01",
+      "date": "2025-08-01",
+      "teamA": "eagles",
+      "teamB": "ravens",
+      "scoreA": 2,
+      "scoreB": 1,
+      "stadium": "Estadio Central"
+    },
+    {
+      "id": "m02",
+      "date": "2025-08-05",
+      "teamA": "sharks",
+      "teamB": "united",
+      "scoreA": 0,
+      "scoreB": 3,
+      "stadium": "Estadio Norte"
+    }
+  ]
+}

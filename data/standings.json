@@ -1,0 +1,8 @@
+{
+  "standings": [
+    {"team": "eagles", "points": 3, "played": 1, "won": 1, "draw": 0, "lost": 0, "goalsFor": 2, "goalsAgainst": 1},
+    {"team": "ravens", "points": 0, "played": 1, "won": 0, "draw": 0, "lost": 1, "goalsFor": 1, "goalsAgainst": 2},
+    {"team": "sharks", "points": 0, "played": 1, "won": 0, "draw": 0, "lost": 1, "goalsFor": 0, "goalsAgainst": 3},
+    {"team": "united", "points": 3, "played": 1, "won": 1, "draw": 0, "lost": 0, "goalsFor": 3, "goalsAgainst": 0}
+  ]
+}

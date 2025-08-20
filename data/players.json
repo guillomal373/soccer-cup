@@ -1,0 +1,28 @@
+{
+  "players": [
+    {"id": "p01", "name": "Jugador 1", "team": "eagles", "position": "Delantero"},
+    {"id": "p02", "name": "Jugador 2", "team": "eagles", "position": "Defensa"},
+    {"id": "p03", "name": "Jugador 3", "team": "eagles", "position": "Portero"},
+    {"id": "p04", "name": "Jugador 4", "team": "eagles", "position": "Mediocampo"},
+    {"id": "p05", "name": "Jugador 5", "team": "eagles", "position": "Defensa"},
+    {"id": "p06", "name": "Jugador 6", "team": "eagles", "position": "Delantero"},
+    {"id": "p07", "name": "Jugador 7", "team": "ravens", "position": "Delantero"},
+    {"id": "p08", "name": "Jugador 8", "team": "ravens", "position": "Defensa"},
+    {"id": "p09", "name": "Jugador 9", "team": "ravens", "position": "Portero"},
+    {"id": "p10", "name": "Jugador 10", "team": "ravens", "position": "Mediocampo"},
+    {"id": "p11", "name": "Jugador 11", "team": "ravens", "position": "Defensa"},
+    {"id": "p12", "name": "Jugador 12", "team": "ravens", "position": "Delantero"},
+    {"id": "p13", "name": "Jugador 13", "team": "sharks", "position": "Delantero"},
+    {"id": "p14", "name": "Jugador 14", "team": "sharks", "position": "Defensa"},
+    {"id": "p15", "name": "Jugador 15", "team": "sharks", "position": "Portero"},
+    {"id": "p16", "name": "Jugador 16", "team": "sharks", "position": "Mediocampo"},
+    {"id": "p17", "name": "Jugador 17", "team": "sharks", "position": "Defensa"},
+    {"id": "p18", "name": "Jugador 18", "team": "sharks", "position": "Delantero"},
+    {"id": "p19", "name": "Jugador 19", "team": "united", "position": "Delantero"},
+    {"id": "p20", "name": "Jugador 20", "team": "united", "position": "Defensa"},
+    {"id": "p21", "name": "Jugador 21", "team": "united", "position": "Portero"},
+    {"id": "p22", "name": "Jugador 22", "team": "united", "position": "Mediocampo"},
+    {"id": "p23", "name": "Jugador 23", "team": "united", "position": "Defensa"},
+    {"id": "p24", "name": "Jugador 24", "team": "united", "position": "Delantero"}
+  ]
+}
