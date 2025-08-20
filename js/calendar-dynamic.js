@@ -39,10 +39,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!a.date && !b.date) return 0;
         if (!a.date) return 1;
         if (!b.date) return -1;
-        // Comparar fechas y horas
-        const dateA = new Date(a.date + (a.time ? 'T' + a.time : ''));
-        const dateB = new Date(b.date + (b.time ? 'T' + b.time : ''));
-        return dateB - dateA;
+        // Comparar fechas
+        const dA = new Date(a.date);
+        const dB = new Date(b.date);
+        if (dA.getTime() !== dB.getTime()) return dB - dA;
+        // Si misma fecha, comparar hora (descendente)
+        const tA = a.time ? a.time.padStart(5, '0') : '00:00';
+        const tB = b.time ? b.time.padStart(5, '0') : '00:00';
+        return tB.localeCompare(tA);
       });
       // Team filter
       const teamVal = teamSelect ? teamSelect.value : '';
