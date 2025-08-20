@@ -1,3 +1,69 @@
+/* Estilos mejorados para los filtros del calendario */
+.calendar-filters {
+  background: var(--green-800);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.10);
+  padding: 18px 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.calendar-filters label:nth-child(1),
+/* Elimina grid para desktop, solo apilado en móvil */
+@media (max-width: 900px) {
+  .calendar-filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 14px 10px;
+  }
+  .calendar-filters label {
+    font-size: 14px;
+  }
+}
+}
+.calendar-filters label {
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.calendar-filters select,
+.calendar-filters input[type="date"] {
+  background: #fff;
+  color: #15422c;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  transition: border-color .2s;
+}
+.calendar-filters select:focus,
+.calendar-filters input[type="date"]:focus {
+  border-color: var(--chip);
+}
+.calendar-filters input[type="date"] {
+  min-width: 120px;
+}
+@media (max-width: 700px) {
+  .calendar-filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 14px 10px;
+  }
+  .calendar-filters label {
+    font-size: 14px;
+  }
+}
 /* Icono de ganador en partidos jugados */
 .winner-icon {
   font-size: 18px;
