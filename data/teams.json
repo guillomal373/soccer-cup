@@ -3,7 +3,10 @@
     {
       "id": "eagles",
       "name": "Santa fé",
-  "logo": "img/eagles/eagles.png",
+  "logo": "img/eagles/logo.png",
+  "city": "Ciudad Ejemplo",
+  "founded": 1998,
+  "stadium": "Estadio Municipal",
         "colors": ["#165b3a", "#21a36c", "#ffffff"],
         "players": [
         {"id": "p01", "name": "Jugador 1", "position": "Delantero"},
@@ -17,7 +20,10 @@
     {
       "id": "ravens",
       "name": "Ravens",
-  "logo": "img/ravens/ravens.png",
+  "logo": "img/ravens/logo.png",
+  "city": "Ciudad Ejemplo",
+  "founded": 2001,
+  "stadium": "Estadio Ravens",
         "colors": ["#172a4a", "#e63946", "#ffffff"],
         "players": [
         {"id": "p07", "name": "Jugador 7", "position": "Delantero"},
@@ -31,7 +37,10 @@
     {
       "id": "sharks",
       "name": "Sharks",
-  "logo": "img/sharks/sharks.png",
+  "logo": "img/sharks/logo.png",
+  "city": "Ciudad Ejemplo",
+  "founded": 2005,
+  "stadium": "Estadio Sharks",
         "colors": ["#064273", "#53c7f0", "#ffffff"],
         "players": [
         {"id": "p13", "name": "Jugador 13", "position": "Delantero"},
@@ -45,7 +54,10 @@
     {
       "id": "united",
       "name": "United",
-  "logo": "img/united/united.png",
+  "logo": "img/united/logo.png",
+  "city": "Ciudad Ejemplo",
+  "founded": 2010,
+  "stadium": "Estadio United",
         "colors": ["#0b4f6c", "#ffd166", "#ffffff"],
         "players": [
         {"id": "p19", "name": "Jugador 19", "position": "Delantero"},

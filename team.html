@@ -23,18 +23,11 @@
     <!-- HERO EQUIPO -->
 <section class="team-hero">
   <div class="team-id">
-    <div class="badge">
-      <img src="img/eagles.png" alt="Eagles">
-    </div>
+    <div class="badge" id="team-hero-logo"></div>
     <div>
-      <h1 class="team-title">Eagles</h1>
-      <!-- NUEVO: posición en la liga -->
-      <span class="chip position-chip">Posición: 1°</span>
-      <div class="team-tags">
-        <span class="chip">Ciudad Ejemplo</span>
-        <span class="chip">Fundado 1998</span>
-        <span class="chip">Estadio Municipal</span>
-      </div>
+      <h1 class="team-title" id="team-hero-name"></h1>
+      <span class="chip position-chip" id="team-hero-position"></span>
+      <div class="team-tags" id="team-hero-tags"></div>
     </div>
   </div>
   <figure class="team-photo">
@@ -47,29 +40,7 @@
       <h2 class="section-title">Información del Equipo</h2>
       <p class="section-sub">Datos generales del club.</p>
     </header>
-
-    <section class="info-cards">
-      <article class="card">
-        <h3>Ciudad</h3>
-        <p>Ciudad Ejemplo</p>
-      </article>
-      <article class="card">
-        <h3>Fundado</h3>
-        <p>1998</p>
-      </article>
-      <article class="card">
-        <h3>Estadio</h3>
-        <p>Estadio Municipal</p>
-      </article>
-      <article class="card">
-        <h3>Colores</h3>
-        <p>
-          <span class="dot" style="--c:#165b3a"></span>
-          <span class="dot" style="--c:#21a36c"></span>
-          <span class="dot" style="--c:#ffffff"></span>
-        </p>
-      </article>
-    </section>
+    <section id="team-info-cards"></section>
 
     <!-- PLANTILLA -->
     <header class="section-head">
@@ -125,52 +96,11 @@
     <section class="team-matches">
       <div class="team-col">
         <h3 class="team-col-title">Últimos partidos</h3>
-        <div class="match-list">
-          <article class="match-row played" data-score="2-1">
-            <div class="m-meta">15 Jun · 3:00 PM · Estadio A</div>
-            <div class="m-vs">
-              <span class="team"><img src="img/eagles.png" alt="Eagles"> <b class="name">Eagles</b></span>
-              <span class="vs">VS</span>
-              <span class="team"><img src="img/ravens.png" alt="Ravens"> <b class="name">Ravens</b></span>
-              <span class="score chip">2–1</span>
-            </div>
-          </article>
-
-          <article class="match-row played" data-score="1-1">
-            <div class="m-meta">10 Jun · 4:30 PM · Estadio A</div>
-            <div class="m-vs">
-              <span class="team"><img src="img/united.png" alt="United"> <b class="name">United</b></span>
-              <span class="vs">VS</span>
-              <span class="team"><img src="img/eagles.png" alt="Eagles"> <b class="name">Eagles</b></span>
-              <span class="score chip">1–1</span>
-            </div>
-          </article>
-        </div>
+        <div class="match-list" id="team-matches-played"></div>
       </div>
-
       <div class="team-col">
         <h3 class="team-col-title">Próximos partidos</h3>
-        <div class="match-list">
-          <article class="match-row">
-            <div class="m-meta">20 Jun · 7:00 PM · Estadio B</div>
-            <div class="m-vs">
-              <span class="team"><img src="img/sharks.png" alt="Sharks"> <b class="name">Sharks</b></span>
-              <span class="vs">VS</span>
-              <span class="team"><img src="img/eagles.png" alt="Eagles"> <b class="name">Eagles</b></span>
-              <span class="score chip pending">—</span>
-            </div>
-          </article>
-
-          <article class="match-row">
-            <div class="m-meta">24 Jun · 5:30 PM · Estadio C</div>
-            <div class="m-vs">
-              <span class="team"><img src="img/eagles.png" alt="Eagles"> <b class="name">Eagles</b></span>
-              <span class="vs">VS</span>
-              <span class="team"><img src="img/united.png" alt="United"> <b class="name">United</b></span>
-              <span class="score chip pending">—</span>
-            </div>
-          </article>
-        </div>
+        <div class="match-list" id="team-matches-upcoming"></div>
       </div>
     </section>
 
@@ -192,5 +122,7 @@
     });
   })();
   </script>
+  <!-- <div id="team-content"></div> -->
+  <script src="js/team.js"></script>
 </body>
 </html>

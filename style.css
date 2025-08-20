@@ -1,3 +1,56 @@
+/* Icono de ganador en partidos jugados */
+.winner-icon {
+  font-size: 18px;
+  color: #1a774f;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.18));
+  margin-left: 4px;
+}
+/* Mejoras para las tarjetas de información del equipo */
+#team-info-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+@media (max-width: 900px) {
+  #team-info-cards {
+    grid-template-columns: 1fr;
+  }
+}
+}
+#team-info-cards .card {
+  background: var(--card);
+  color: var(--text);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.10);
+  padding: 22px 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#team-info-cards .card h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: .04em;
+}
+#team-info-cards .card p {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+#team-info-cards .dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin: 0 4px;
+  background: var(--c, #ccc);
+  border: 2px solid #fff;
+}
 /* =========================
        Variables (puedes ajustar tonos aquí)
        ========================= */

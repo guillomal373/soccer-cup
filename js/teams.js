@@ -16,7 +16,7 @@ function mostrarEquipos(equipos) {
   equipos.forEach(equipo => {
     const card = document.createElement('a');
     card.className = 'team-card';
-    card.href = `equipo-${equipo.id}.html`;
+  card.href = `team.html?team=${equipo.id}`;
     card.setAttribute('aria-label', equipo.name);
     card.innerHTML = `
       <div class="badge">

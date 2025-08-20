@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Torneo de Fútbol</title>
   <link rel="stylesheet" href="style.css"> 
+  <style>
+    /* Icono de ganador en partidos jugados */
+    .winner-icon {
+      font-size: 18px;
+      color: #1a774f;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,.18));
+      margin-left: 4px;
+    }
+  </style>
 </head>
 <body>
 
@@ -144,6 +153,42 @@
   <h1 class="section-title">Calendario de Partidos</h1>
   <p class="section-sub">Fecha, hora, estadio y VS con logos.</p>
 </header>
+<!-- FILTROS DE CALENDARIO -->
+    <section class="calendar-filters" style="margin: 24px 0 18px; display: flex; flex-wrap: wrap; gap: 18px; align-items: center;">
+      <label>
+        Equipo:
+        <select id="filter-team">
+          <option value="">Todos</option>
+        </select>
+      </label>
+      <label>
+        Estado:
+        <select id="filter-state">
+          <option value="">Todos</option>
+          <option value="played">Jugados</option>
+          <option value="upcoming">Próximos</option>
+        </select>
+      </label>
+      <label>
+        Estadio:
+        <select id="filter-stadium">
+          <option value="">Todos</option>
+        </select>
+      </label>
+      <label>
+        Resultado:
+        <select id="filter-result">
+          <option value="">Todos</option>
+          <option value="win">Ganados</option>
+          <option value="draw">Empatados</option>
+          <option value="lost">Perdidos</option>
+        </select>
+      </label>
+      <label>
+        Fecha:
+        <input type="date" id="filter-date-from"> a <input type="date" id="filter-date-to">
+      </label>
+    </section>
 <section class="calendar-wrap">
   <!-- Desktop: TABLE -->
   <table class="calendar calendar-table">
