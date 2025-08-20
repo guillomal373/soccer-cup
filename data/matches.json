@@ -17,6 +17,42 @@
       "scoreA": 0,
       "scoreB": 3,
       "stadium": "Estadio Norte"
+    },
+    {
+      "id": "m03",
+      "date": "2025-08-01",
+      "teamA": "eagles",
+      "teamB": "ravens",
+      "scoreA": 2,
+      "scoreB": 1,
+      "stadium": "Estadio Central"
+    },
+    {
+      "id": "m04",
+      "date": "2025-08-05",
+      "teamA": "sharks",
+      "teamB": "united",
+      "scoreA": 0,
+      "scoreB": 3,
+      "stadium": "Estadio Norte"
+    },
+    {
+      "id": "m05",
+      "date": "2025-08-01",
+      "teamA": "eagles",
+      "teamB": "ravens",
+      "scoreA": 2,
+      "scoreB": 1,
+      "stadium": "Estadio Central"
+    },
+    {
+      "id": "m06",
+      "date": "2025-08-05",
+      "teamA": "sharks",
+      "teamB": "united",
+      "scoreA": 0,
+      "scoreB": 3,
+      "stadium": "Estadio Norte"
     }
   ]
 }
