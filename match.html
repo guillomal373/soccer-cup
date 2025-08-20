@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Partido – Eagles vs Ravens</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="frame">
+
+    <!-- NAV (igual a tus páginas) -->
+    <nav class="nav" aria-label="Principal">
+      <ul class="nav-list">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#teams">Teams</a></li>
+        <li><a href="index.html#matches">Matches</a></li>
+        <li><a href="index.html#standings">Standings</a></li>
+      </ul>
+      <a href="index.html#matches" class="login">← Volver</a>
+    </nav>
+
+    <!-- ===== Banner del partido ===== -->
+  <section class="match-banner">
+    <img src="img/matchs/m01.jpg" alt="Foto del partido" />
+  </section>
+
+    <!-- ===== Encabezado del partido ===== -->
+    <section class="match-header">
+      <div class="match-info">
+        <span class="chip"><time datetime="2025-06-15">Dom, 15 Jun</time></span>
+        <span class="chip">3:00 PM</span>
+        <span class="chip">Estadio A</span>
+        <span class="chip done">Finalizado</span>
+      </div>
+
+      <div class="match-hero">
+        <div class="team home">
+          <span class="crest"><img src="img/eagles.png" alt="Eagles" /></span>
+          <h3 class="t-name">Eagles</h3>
+        </div>
+
+        <div class="score">
+          <span class="n h">2</span>
+          <span class="vs">VS</span>
+          <span class="n a">1</span>
+        </div>
+
+        <div class="team away">
+          <span class="crest"><img src="img/ravens.png" alt="Ravens" /></span>
+          <h3 class="t-name">Ravens</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Cronología ===== -->
+    <section class="match-timeline">
+      <h2 class="section-title">Cronología del Partido</h2>
+      <p class="section-sub">Goles, tarjetas y eventos minuto a minuto.</p>
+
+      <div class="timeline-list">
+        <div class="t-row">
+          <span class="minute">12’</span>
+          <div class="t-card goal">¡Gol de J. Alvarez (EAG)! Asistencia de L. Ramos.</div>
+        </div>
+        <div class="t-row">
+          <span class="minute">33’</span>
+          <div class="t-card yc">Tarjeta amarilla para C. Pérez (RAV) por falta táctica.</div>
+        </div>
+        <div class="t-row">
+          <span class="minute">54’</span>
+          <div class="t-card goal">Gol de M. Duarte (RAV) con remate cruzado.</div>
+        </div>
+        <div class="t-row">
+          <span class="minute">70’</span>
+          <div class="t-card rc">Tarjeta roja para P. Molina (RAV) por doble amarilla.</div>
+        </div>
+        <div class="t-row">
+          <span class="minute">81’</span>
+          <div class="t-card goal">Gol de R. Nieto (EAG) tras córner.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Resumen de tarjetas ===== -->
+    <section class="match-cards">
+      <h2 class="section-title">Resumen de Tarjetas</h2>
+      <p class="section-sub">Totales por equipo.</p>
+
+      <div class="cards-grid">
+        <article class="cards-item">
+          <div class="cards-head">
+            <span class="crest sm"><img src="img/eagles.png" alt="Eagles" /></span>
+            <strong class="team-name">Eagles</strong>
+          </div>
+          <div class="cards-stats">
+            <span class="stat"><i class="rect yc"></i> 1 Amarilla</span>
+            <span class="stat"><i class="rect rc"></i> 0 Roja</span>
+          </div>
+        </article>
+
+        <article class="cards-item">
+          <div class="cards-head">
+            <span class="crest sm"><img src="img/ravens.png" alt="Ravens" /></span>
+            <strong class="team-name">Ravens</strong>
+          </div>
+          <div class="cards-stats">
+            <span class="stat"><i class="rect yc"></i> 3 Amarillas</span>
+            <span class="stat"><i class="rect rc"></i> 1 Roja</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">© 2025 Torneo Regional de Fútbol</footer>
+  </main>
+
+  <!-- Resalta ganador automáticamente -->
+  <script>
+    (function(){
+      const h = parseInt(document.querySelector('.score .h')?.textContent||"",10);
+      const a = parseInt(document.querySelector('.score .a')?.textContent||"",10);
+      const th = document.querySelector('.team.home .t-name');
+      const ta = document.querySelector('.team.away .t-name');
+      if(Number.isFinite(h) && Number.isFinite(a)){
+        if(h>a) th?.classList.add('winner');
+        else if(a>h) ta?.classList.add('winner');
+        else { th?.classList.add('draw'); ta?.classList.add('draw'); }
+      }
+    })();
+  </script>
+</body>
+</html>

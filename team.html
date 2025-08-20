@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eagles – Ficha del Equipo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="frame">
+    <!-- NAV -->
+    <nav class="nav" aria-label="Principal">
+      <ul class="nav-list">
+        <li><a href="index.html#about">Acerca</a></li>
+        <li><a href="index.html#teams">Equipos</a></li>
+        <li><a href="index.html#matches">Partidos</a></li>
+        <li><a href="index.html#standings">Posiciones</a></li>
+      </ul>
+
+      <a href="index.html#teams" class="login">← Volver</a>
+    </nav>
+
+    <!-- HERO EQUIPO -->
+<section class="team-hero">
+  <div class="team-id">
+    <div class="badge">
+      <img src="img/eagles.png" alt="Eagles">
+    </div>
+    <div>
+      <h1 class="team-title">Eagles</h1>
+      <!-- NUEVO: posición en la liga -->
+      <span class="chip position-chip">Posición: 1°</span>
+      <div class="team-tags">
+        <span class="chip">Ciudad Ejemplo</span>
+        <span class="chip">Fundado 1998</span>
+        <span class="chip">Estadio Municipal</span>
+      </div>
+    </div>
+  </div>
+  <figure class="team-photo">
+    <img src="img/eagles/equipo.jpg" alt="Plantel completo de Eagles">
+  </figure>
+</section>
+
+    <!-- INFO BÁSICA -->
+    <header class="section-head">
+      <h2 class="section-title">Información del Equipo</h2>
+      <p class="section-sub">Datos generales del club.</p>
+    </header>
+
+    <section class="info-cards">
+      <article class="card">
+        <h3>Ciudad</h3>
+        <p>Ciudad Ejemplo</p>
+      </article>
+      <article class="card">
+        <h3>Fundado</h3>
+        <p>1998</p>
+      </article>
+      <article class="card">
+        <h3>Estadio</h3>
+        <p>Estadio Municipal</p>
+      </article>
+      <article class="card">
+        <h3>Colores</h3>
+        <p>
+          <span class="dot" style="--c:#165b3a"></span>
+          <span class="dot" style="--c:#21a36c"></span>
+          <span class="dot" style="--c:#ffffff"></span>
+        </p>
+      </article>
+    </section>
+
+    <!-- PLANTILLA -->
+    <header class="section-head">
+      <h2 class="section-title">Plantilla</h2>
+      <p class="section-sub">Jugadores, número y posición.</p>
+    </header>
+
+    <section class="roster-grid">
+      <!-- Jugador -->
+      <article class="player-card">
+        <img src="img/eagles/p01.png" alt="J. Alvarez" class="player-photo">
+        <div class="p-meta">
+          <div class="p-row">
+            <span class="p-number">9</span>
+            <h3 class="p-name">J. Alvarez</h3>
+          </div>
+          <span class="p-pos">Delantero</span>
+        </div>
+      </article>
+
+      <article class="player-card">
+        <img src="img/eagles/p02.png" alt="M. Duarte" class="player-photo">
+        <div class="p-meta"><div class="p-row"><span class="p-number">7</span><h3 class="p-name">M. Duarte</h3></div><span class="p-pos">Extremo</span></div>
+      </article>
+
+      <article class="player-card">
+        <img src="img/eagles/p03.png" alt="A. Silva" class="player-photo">
+        <div class="p-meta"><div class="p-row"><span class="p-number">1</span><h3 class="p-name">A. Silva</h3></div><span class="p-pos">Portero</span></div>
+      </article>
+
+      <article class="player-card">
+        <img src="img/eagles/p04.png" alt="L. Ramos" class="player-photo">
+        <div class="p-meta"><div class="p-row"><span class="p-number">5</span><h3 class="p-name">L. Ramos</h3></div><span class="p-pos">Mediocentro</span></div>
+      </article>
+
+      <article class="player-card">
+        <img src="img/eagles/p05.png" alt="C. Vega" class="player-photo">
+        <div class="p-meta"><div class="p-row"><span class="p-number">2</span><h3 class="p-name">C. Vega</h3></div><span class="p-pos">Defensa</span></div>
+      </article>
+
+      <article class="player-card">
+        <img src="img/eagles/p06.png" alt="R. Nieto" class="player-photo">
+        <div class="p-meta"><div class="p-row"><span class="p-number">10</span><h3 class="p-name">R. Nieto</h3></div><span class="p-pos">Enganche</span></div>
+      </article>
+    </section>
+
+    <!-- ÚLTIMOS Y PRÓXIMOS PARTIDOS -->
+    <header class="section-head">
+      <h2 class="section-title">Partidos del Equipo</h2>
+      <p class="section-sub">Últimos resultados y próximos encuentros.</p>
+    </header>
+
+    <section class="team-matches">
+      <div class="team-col">
+        <h3 class="team-col-title">Últimos partidos</h3>
+        <div class="match-list">
+          <article class="match-row played" data-score="2-1">
+            <div class="m-meta">15 Jun · 3:00 PM · Estadio A</div>
+            <div class="m-vs">
+              <span class="team"><img src="img/eagles.png" alt="Eagles"> <b class="name">Eagles</b></span>
+              <span class="vs">VS</span>
+              <span class="team"><img src="img/ravens.png" alt="Ravens"> <b class="name">Ravens</b></span>
+              <span class="score chip">2–1</span>
+            </div>
+          </article>
+
+          <article class="match-row played" data-score="1-1">
+            <div class="m-meta">10 Jun · 4:30 PM · Estadio A</div>
+            <div class="m-vs">
+              <span class="team"><img src="img/united.png" alt="United"> <b class="name">United</b></span>
+              <span class="vs">VS</span>
+              <span class="team"><img src="img/eagles.png" alt="Eagles"> <b class="name">Eagles</b></span>
+              <span class="score chip">1–1</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="team-col">
+        <h3 class="team-col-title">Próximos partidos</h3>
+        <div class="match-list">
+          <article class="match-row">
+            <div class="m-meta">20 Jun · 7:00 PM · Estadio B</div>
+            <div class="m-vs">
+              <span class="team"><img src="img/sharks.png" alt="Sharks"> <b class="name">Sharks</b></span>
+              <span class="vs">VS</span>
+              <span class="team"><img src="img/eagles.png" alt="Eagles"> <b class="name">Eagles</b></span>
+              <span class="score chip pending">—</span>
+            </div>
+          </article>
+
+          <article class="match-row">
+            <div class="m-meta">24 Jun · 5:30 PM · Estadio C</div>
+            <div class="m-vs">
+              <span class="team"><img src="img/eagles.png" alt="Eagles"> <b class="name">Eagles</b></span>
+              <span class="vs">VS</span>
+              <span class="team"><img src="img/united.png" alt="United"> <b class="name">United</b></span>
+              <span class="score chip pending">—</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">© 2025 Torneo Regional de Fútbol</footer>
+  </main>
+
+  <!-- Mini realce de ganador/empate en “últimos partidos” -->
+  <script>
+  (function(){
+    document.querySelectorAll('.match-row.played').forEach(card=>{
+      const sc = card.getAttribute('data-score'); if(!sc) return;
+      const [h,a] = sc.split('-').map(Number);
+      const names = card.querySelectorAll('.m-vs .name');
+      if(Number.isFinite(h) && Number.isFinite(a)){
+        if(h>a) names[0].classList.add('winner'); 
+        else if(a>h) names[1].classList.add('winner');
+        else names.forEach(n=>n.classList.add('draw'));
+      }
+    });
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Torneo de Fútbol</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+  <main class="frame">
+    <!-- NAV -->
+    <nav class="nav" aria-label="Principal">
+      <ul class="nav-list">
+        <li><a href="index.html#about">Acerca</a></li>
+        <li><a href="index.html#teams">Equipos</a></li>
+        <li><a href="index.html#matches">Partidos</a></li>
+        <li><a href="index.html#standings">Posiciones</a></li>
+        <li><a href="index.html#stats">Estadísticas</a></li>
+        <li><a href="index.html#gallery">Galería</a></li>
+        <li><a href="index.html#news">Noticias</a></li>
+        <li><a href="index.html#sponsors">Patrocinadores</a></li>
+      </ul>
+      <a href="#" style="color:#fff;text-decoration:none;font-weight:700;">Login</a>
+    </nav>
+
+    <!-- HERO (Home Section) -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <h1 class="hero-title">Soccer<br/>Tournament</h1>
+        <div class="hero-dates">June 10 – July 16</div>
+        <a class="hero-cta" href="#matches">VIEW MATCHES</a>
+        <div class="hero-sub">TABLE OF STANDINGS</div>
+
+        <!-- Métricas -->
+        <div class="metrics" role="list">
+          <article class="card" role="listitem">
+            <div class="big">8</div>
+            <div class="label">Teams</div>
+          </article>
+          <article class="card" role="listitem">
+            <div class="big">20</div>
+            <div class="label">Matches</div>
+          </article>
+          <article class="card" role="listitem">
+            <div class="big">1</div>
+            <div class="label">Month</div>
+          </article>
+        </div>
+      </div>
+      <figure class="hero-media" aria-label="Imagen del torneo"></figure>
+    </section>
+
+    <!-- TORNEO INFO SECTION -->
+    <header class="section-head" id="about">
+      <h1 class="section-title">Información del Torneo</h1>
+      <p class="section-sub">Descripción, lugar, fechas, formato, imagen del torneo y patrocinadores.</p>
+    </header>
+
+    <section class="info-wrap">
+      <!-- Columna izquierda -->
+      <article class="info-left">
+        <h2>Descripción</h2>
+        <p>
+          El Torneo Regional de Fútbol reúne a los mejores equipos juveniles de la zona.
+          Se juega en formato competitivo con enfoque en el desarrollo deportivo y el juego limpio.
+        </p>
+
+        <div class="facts-grid">
+          <div class="card">
+            <h3>Lugar</h3>
+            <p>Ciudad Ejemplo – Estadio Municipal</p>
+          </div>
+          <div class="card">
+            <h3>Fechas</h3>
+            <p>10 de junio – 16 de julio</p>
+          </div>
+          <div class="card span-2">
+            <h3>Formato</h3>
+            <p>Fase de liga “todos contra todos” a una vuelta y fase final por eliminación directa.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Columna derecha -->
+      <aside class="info-right">
+        <!-- Logo del torneo (SVG placeholder; reemplázalo por tu imagen si quieres) -->
+        <div class="logo-wrap" aria-label="Logo del torneo">
+          <svg viewBox="0 0 220 220" width="180" height="180" role="img" aria-label="Balón de fútbol">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#e9ffe9"/>
+                <stop offset="1" stop-color="#dff7e8"/>
+              </linearGradient>
+            </defs>
+            <circle cx="110" cy="110" r="100" fill="url(#g)" stroke="#0f6a43" stroke-width="10"/>
+            <!-- pentágono central -->
+            <polygon points="110,70 145,90 135,130 85,130 75,90" fill="#0f6a43"/>
+            <!-- patches simples -->
+            <circle cx="60" cy="95" r="18" fill="#0f6a43"/>
+            <circle cx="160" cy="95" r="18" fill="#0f6a43"/>
+            <circle cx="80" cy="155" r="18" fill="#0f6a43"/>
+            <circle cx="140" cy="155" r="18" fill="#0f6a43"/>
+          </svg>
+        </div>
+
+        <div class="tags">
+          <span class="chip">Ejemplo</span>
+          <span class="chip">Torneo</span>
+          <span class="chip">2025</span>
+        </div>
+
+        <!-- Patrocinadores -->
+        <div class="sponsors">
+          <h3>Patrocinadores</h3>
+          <div class="sponsor-grid">
+            <!-- Logos de ejemplo en SVG; reemplaza por <img src="tulogoa.svg"> -->
+            <svg viewBox="0 0 120 60" aria-label="Sponsor 1">
+              <text x="10" y="38" font-size="24" font-weight="900" fill="#15422c">SPONSOR</text>
+            </svg>
+            <svg viewBox="0 0 120 60" aria-label="Sponsor 2">
+              <path d="M60 10 l14 18 -14 18 -14-18z" fill="#1a774f"/>
+              <text x="38" y="35" font-size="16" font-weight="800" fill="#15422c">BRAND</text>
+            </svg>
+            <svg viewBox="0 0 120 60" aria-label="Sponsor 3">
+              <circle cx="30" cy="30" r="18" fill="none" stroke="#1a774f" stroke-width="5"/>
+              <path d="M20 35 l10-16 10 16" fill="none" stroke="#15422c" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+<!-- ===================== EQUIPOS ===================== -->
+<header class="section-head" id="teams">
+  <h1 class="section-title">Equipos</h1>
+  <p class="section-sub">Tarjetas con logo, nombre y colores.</p>
+</header>
+
+<section class="teams-wrap">
+  <div class="team-grid">
+
+    <!-- EAGLES -->
+    <a class="team-card" href="equipo-eagles.html" aria-label="Eagles">
+      <div class="badge">
+        <img src="img/eagles.png" alt="Eagles logo">
+      </div>
+      <div class="team-meta">
+        <h3 class="team-name">Eagles</h3>
+        <span class="team-colors">
+          <i style="background:#165b3a"></i>
+          <i style="background:#21a36c"></i>
+          <i style="background:#ffffff"></i>
+        </span>
+      </div>
+    </a>
+
+    <!-- RAVENS -->
+    <a class="team-card" href="equipo-ravens.html" aria-label="Ravens">
+      <div class="badge">
+        <img src="img/ravens.png" alt="Ravens logo">
+      </div>
+      <div class="team-meta">
+        <h3 class="team-name">Ravens</h3>
+        <span class="team-colors">
+          <i style="background:#172a4a"></i>
+          <i style="background:#e63946"></i>
+          <i style="background:#ffffff"></i>
+        </span>
+      </div>
+    </a>
+
+    <!-- UNITED -->
+    <a class="team-card" href="equipo-united.html" aria-label="United">
+      <div class="badge">
+        <img src="img/united.png" alt="United logo">
+      </div>
+      <div class="team-meta">
+        <h3 class="team-name">United</h3>
+        <span class="team-colors">
+          <i style="background:#0b4f6c"></i>
+          <i style="background:#ffd166"></i>
+          <i style="background:#ffffff"></i>
+        </span>
+      </div>
+    </a>
+
+    <!-- SHARKS -->
+    <a class="team-card" href="equipo-sharks.html" aria-label="Sharks">
+      <div class="badge">
+        <img src="img/sharks.png" alt="Sharks logo">
+      </div>
+      <div class="team-meta">
+        <h3 class="team-name">Sharks</h3>
+        <span class="team-colors">
+          <i style="background:#064273"></i>
+          <i style="background:#53c7f0"></i>
+          <i style="background:#ffffff"></i>
+        </span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ===================== CALENDARIO ===================== -->
+<header class="section-head" id="matches">
+  <h1 class="section-title">Calendario de Partidos</h1>
+  <p class="section-sub">Fecha, hora, estadio y VS con logos.</p>
+</header>
+
+<section class="calendar-wrap">
+  <!-- Desktop: TABLE -->
+  <table class="calendar calendar-table">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Partido</th>
+        <th>Estadio</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-home="Eagles" data-away="Ravens" data-score="2-1">
+        <td>15 Jun</td>
+        <td>3:00 PM</td>
+        <td class="versus">
+          <span class="team">
+            <img src="img/eagles.png" alt="Eagles" class="logo"> <b>Eagles</b>
+          </span>
+          <span class="vs">VS</span>
+          <span class="team">
+            <img src="img/ravens.png" alt="Ravens" class="logo"> <b>Ravens</b>
+          </span>
+        </td>
+        <td>Estadio A</td>
+        <td class="score">2–1</td>
+      </tr>
+      <tr data-home="United" data-away="Sharks">
+        <td>17 Jun</td>
+        <td>5:30 PM</td>
+        <td class="versus">
+          <span class="team">
+            <img src="img/united.png" alt="United" class="logo"> <b>United</b>
+          </span>
+          <span class="vs">VS</span>
+          <span class="team">
+            <img src="img/sharks.png" alt="Sharks" class="logo"> <b>Sharks</b>
+          </span>
+        </td>
+        <td>Estadio B</td>
+        <td class="score pending">—</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Mobile: CARDS (same data) -->
+  <div class="calendar-cards">
+    <article class="match-card" data-home="Eagles" data-away="Ravens" data-score="2-1">
+      <div class="match-meta">
+        <span class="date">15 Jun</span> · <span class="time">3:00 PM</span>
+      </div>
+      <div class="match-versus">
+        <span class="team">
+          <img src="img/eagles.png" alt="Eagles" class="logo">
+          <b class="name">Eagles</b>
+        </span>
+        <span class="vs">VS</span>
+        <span class="team">
+          <img src="img/ravens.png" alt="Ravens" class="logo">
+          <b class="name">Ravens</b>
+        </span>
+      </div>
+      <div class="match-extra">
+        <span class="chip stadium">Estadio A</span>
+        <span class="chip score">2–1</span>
+      </div>
+    </article>
+
+    <article class="match-card" data-home="United" data-away="Sharks">
+      <div class="match-meta">
+        <span class="date">17 Jun</span> · <span class="time">5:30 PM</span>
+      </div>
+      <div class="match-versus">
+        <span class="team">
+          <img src="img/united.png" alt="United" class="logo">
+          <b class="name">United</b>
+        </span>
+        <span class="vs">VS</span>
+        <span class="team">
+          <img src="img/sharks.png" alt="Sharks" class="logo">
+          <b class="name">Sharks</b>
+        </span>
+      </div>
+      <div class="match-extra">
+        <span class="chip stadium">Estadio B</span>
+        <span class="chip score pending">—</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== POSICIONES ===================== -->
+<header class="section-head" id="standings">
+  <h1 class="section-title">Tabla de Posiciones</h1>
+  <p class="section-sub">Ranking con PJ, PG, PE, PP, GF, GC, DG y Puntos.</p>
+</header>
+
+<section class="table-wrap">
+  <!-- Desktop: TABLE -->
+  <table class="standings standings-table">
+    <thead>
+      <tr>
+        <th>#</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th>
+        <th>GF</th><th>GC</th><th>DG</th><th>Pts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="is-leader">
+        <td>1</td>
+        <td class="t"><img src="img/eagles.png" alt="Eagles" class="logo sm"> Eagles</td>
+        <td>3</td><td>3</td><td>0</td><td>0</td><td>7</td><td>2</td><td>+5</td><td>9</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td class="t"><img src="img/ravens.png" alt="Ravens" class="logo sm"> Ravens</td>
+        <td>3</td><td>2</td><td>0</td><td>1</td><td>5</td><td>3</td><td>+2</td><td>6</td>
+      </tr>
+      <tr class="is-bottom">
+        <td>3</td>
+        <td class="t"><img src="img/united.png" alt="United" class="logo sm"> United</td>
+        <td>3</td><td>0</td><td>1</td><td>2</td><td>2</td><td>6</td><td>-4</td><td>1</td>
+      </tr>
+      <tr class="is-bottom">
+        <td>4</td>
+        <td class="t"><img src="img/sharks.png" alt="Sharks" class="logo sm"> Sharks</td>
+        <td>3</td><td>0</td><td>1</td><td>2</td><td>1</td><td>6</td><td>-5</td><td>1</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Mobile: CARDS -->
+  <ol class="standings-cards">
+    <li class="standing-card is-leader">
+      <span class="rank">1</span>
+      <img src="img/eagles.png" class="logo sm" alt="Eagles">
+      <span class="name">Eagles</span>
+      <span class="pts chip">9 pts</span>
+      <div class="statline">
+        <span>PJ 3</span><span>PG 3</span><span>PE 0</span><span>PP 0</span>
+        <span>GF 7</span><span>GC 2</span><span>DG +5</span>
+      </div>
+    </li>
+    <li class="standing-card">
+      <span class="rank">2</span>
+      <img src="img/ravens.png" class="logo sm" alt="Ravens">
+      <span class="name">Ravens</span>
+      <span class="pts chip">6 pts</span>
+      <div class="statline">
+        <span>PJ 3</span><span>PG 2</span><span>PE 0</span><span>PP 1</span>
+        <span>GF 5</span><span>GC 3</span><span>DG +2</span>
+      </div>
+    </li>
+    <li class="standing-card is-bottom">
+      <span class="rank">3</span>
+      <img src="img/united.png" class="logo sm" alt="United">
+      <span class="name">United</span>
+      <span class="pts chip">1 pt</span>
+      <div class="statline">
+        <span>PJ 3</span><span>PG 0</span><span>PE 1</span><span>PP 2</span>
+        <span>GF 2</span><span>GC 6</span><span>DG -4</span>
+      </div>
+    </li>
+    <li class="standing-card is-bottom">
+      <span class="rank">4</span>
+      <img src="img/sharks.png" class="logo sm" alt="Sharks">
+      <span class="name">Sharks</span>
+      <span class="pts chip">1 pt</span>
+      <div class="statline">
+        <span>PJ 3</span><span>PG 0</span><span>PE 1</span><span>PP 2</span>
+        <span>GF 1</span><span>GC 6</span><span>DG -5</span>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ===================== ESTADÍSTICAS ===================== -->
+<header class="section-head" id="stats">
+  <h1 class="section-title">Estadísticas</h1>
+  <p class="section-sub">Goleadores, tarjetas y portero menos vencido.</p>
+</header>
+
+<section class="stats-wrap">
+  <!-- Tabs -->
+  <div class="stats-tabs" role="tablist" aria-label="Tabs estadísticas">
+    <button class="tab is-active" data-tab="scorers" aria-selected="true">Goleadores</button>
+    <button class="tab" data-tab="cards">Tarjetas</button>
+    <button class="tab" data-tab="keepers">Portero menos vencido</button>
+  </div>
+
+  <!-- Panel: Goleadores -->
+  <div class="stats-panel is-active" id="panel-scorers" role="tabpanel">
+    <!-- Desktop: table -->
+    <table class="stats-table">
+      <thead>
+        <tr><th>#</th><th>Jugador</th><th>Equipo</th><th>Goles</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>J. Alvarez</td><td><img src="img/eagles.png" class="logo sm" alt=""> Eagles</td><td>5</td></tr>
+        <tr><td>2</td><td>M. Duarte</td><td><img src="img/ravens.png" class="logo sm" alt=""> Ravens</td><td>4</td></tr>
+        <tr><td>3</td><td>L. Ramos</td><td><img src="img/united.png" class="logo sm" alt=""> United</td><td>3</td></tr>
+      </tbody>
+    </table>
+    <!-- Mobile: cards -->
+    <ol class="stats-cards">
+      <li class="stat-card"><span class="rank">1</span><span class="name">J. Alvarez</span><span class="team"><img src="img/eagles.png" class="logo sm" alt=""> Eagles</span><span class="value chip">5</span></li>
+      <li class="stat-card"><span class="rank">2</span><span class="name">M. Duarte</span><span class="team"><img src="img/ravens.png" class="logo sm" alt=""> Ravens</span><span class="value chip">4</span></li>
+      <li class="stat-card"><span class="rank">3</span><span class="name">L. Ramos</span><span class="team"><img src="img/united.png" class="logo sm" alt=""> United</span><span class="value chip">3</span></li>
+    </ol>
+  </div>
+
+  <!-- Panel: Tarjetas -->
+  <div class="stats-panel" id="panel-cards" role="tabpanel" hidden>
+    <table class="stats-table">
+      <thead>
+        <tr><th>#</th><th>Jugador</th><th>Equipo</th><th>Amarillas</th><th>Rojas</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>P. Molina</td><td><img src="img/sharks.png" class="logo sm" alt=""> Sharks</td><td>4</td><td>1</td></tr>
+        <tr><td>2</td><td>C. Pérez</td><td><img src="img/ravens.png" class="logo sm" alt=""> Ravens</td><td>3</td><td>0</td></tr>
+        <tr><td>3</td><td>D. Arias</td><td><img src="img/eagles.png" class="logo sm" alt=""> Eagles</td><td>2</td><td>0</td></tr>
+      </tbody>
+    </table>
+    <ol class="stats-cards">
+      <li class="stat-card"><span class="rank">1</span><span class="name">P. Molina</span><span class="team"><img src="img/sharks.png" class="logo sm" alt=""> Sharks</span><span class="value chip">4A · 1R</span></li>
+      <li class="stat-card"><span class="rank">2</span><span class="name">C. Pérez</span><span class="team"><img src="img/ravens.png" class="logo sm" alt=""> Ravens</span><span class="value chip">3A · 0R</span></li>
+      <li class="stat-card"><span class="rank">3</span><span class="name">D. Arias</span><span class="team"><img src="img/eagles.png" class="logo sm" alt=""> Eagles</span><span class="value chip">2A · 0R</span></li>
+    </ol>
+  </div>
+
+  <!-- Panel: Portero menos vencido -->
+  <div class="stats-panel" id="panel-keepers" role="tabpanel" hidden>
+    <table class="stats-table">
+      <thead>
+        <tr><th>#</th><th>Portero</th><th>Equipo</th><th>Goles en contra</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>A. Silva</td><td><img src="img/eagles.png" class="logo sm" alt=""> Eagles</td><td>2</td></tr>
+        <tr><td>2</td><td>R. Nieto</td><td><img src="img/ravens.png" class="logo sm" alt=""> Ravens</td><td>3</td></tr>
+        <tr><td>3</td><td>G. Villa</td><td><img src="img/united.png" class="logo sm" alt=""> United</td><td>6</td></tr>
+      </tbody>
+    </table>
+    <ol class="stats-cards">
+      <li class="stat-card"><span class="rank">1</span><span class="name">A. Silva</span><span class="team"><img src="img/eagles.png" class="logo sm" alt=""> Eagles</span><span class="value chip">GC 2</span></li>
+      <li class="stat-card"><span class="rank">2</span><span class="name">R. Nieto</span><span class="team"><img src="img/ravens.png" class="logo sm" alt=""> Ravens</span><span class="value chip">GC 3</span></li>
+      <li class="stat-card"><span class="rank">3</span><span class="name">G. Villa</span><span class="team"><img src="img/united.png" class="logo sm" alt=""> United</span><span class="value chip">GC 6</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== GALERÍA ===================== -->
+<header class="section-head" id="gallery">
+  <h1 class="section-title">Galería</h1>
+  <p class="section-sub">Fotos y videos del torneo.</p>
+</header>
+
+<section class="gallery-wrap">
+  <!-- Carrusel (scroll-snap) -->
+  <div class="carousel" data-carousel>
+    <button class="c-btn prev" aria-label="Anterior">‹</button>
+    <div class="c-track">
+      <figure class="c-item"><img src="img/gallery1.jpg" alt="Foto 1"><figcaption>Gol decisivo</figcaption></figure>
+      <figure class="c-item"><img src="img/gallery2.jpg" alt="Foto 2"><figcaption>Afición</figcaption></figure>
+      <figure class="c-item"><img src="img/gallery3.jpg" alt="Foto 3"><figcaption>Atajada</figcaption></figure>
+      <figure class="c-item video">
+        <video src="img/highlights.mp4" controls preload="metadata"></video>
+        <figcaption>Highlights</figcaption>
+      </figure>
+    </div>
+    <button class="c-btn next" aria-label="Siguiente">›</button>
+  </div>
+</section>
+
+<!-- ===================== NOTICIAS & NOVEDADES ===================== -->
+<header class="section-head" id="news">
+  <h1 class="section-title">Noticias y Novedades</h1>
+  <p class="section-sub">Comunicados rápidos de la organización.</p>
+</header>
+
+<section class="news-wrap">
+  <article class="news-card">
+    <time datetime="2025-06-18">18 Jun</time>
+    <h3>Cambio de horario – Fecha 3</h3>
+    <p>El partido United vs Sharks se mueve a las 6:00 PM por mantenimiento de cancha.</p>
+  </article>
+  <article class="news-card">
+    <time datetime="2025-06-16">16 Jun</time>
+    <h3>Revisión de tarjetas</h3>
+    <p>El comité disciplinario confirmó la sanción de 1 fecha para P. Molina (Sharks).</p>
+  </article>
+  <article class="news-card">
+    <time datetime="2025-06-12">12 Jun</time>
+    <h3>Ingreso al estadio</h3>
+    <p>Las puertas abren 60 minutos antes. Recuerda llevar documento de identidad.</p>
+  </article>
+</section>
+
+<!-- ===================== PATROCINADORES ===================== -->
+<header class="section-head" id="sponsors">
+  <h1 class="section-title">Patrocinadores</h1>
+  <p class="section-sub">Aliados que hacen posible el torneo.</p>
+</header>
+
+<section class="sponsors-wrap">
+  <!-- carrusel simple (autoscroll CSS) -->
+<div class="sponsors-marquee">
+  <div class="s-row">
+    <a class="s-item"><img src="img/sponsor1.png" alt="Sponsor 1"></a>
+    <a class="s-item"><img src="img/sponsor2.png" alt="Sponsor 2"></a>
+    <a class="s-item"><img src="img/sponsor3.png" alt="Sponsor 3"></a>
+    <a class="s-item"><img src="img/sponsor4.png" alt="Sponsor 4"></a>
+    <a class="s-item"><img src="img/sponsor5.png" alt="Sponsor 5"></a>
+    <!-- duplicados -->
+    <a class="s-item"><img src="img/sponsor1.png" alt="Sponsor 1"></a>
+    <a class="s-item"><img src="img/sponsor2.png" alt="Sponsor 2"></a>
+    <a class="s-item"><img src="img/sponsor3.png" alt="Sponsor 3"></a>
+    <a class="s-item"><img src="img/sponsor4.png" alt="Sponsor 4"></a>
+    <a class="s-item"><img src="img/sponsor5.png" alt="Sponsor 5"></a>
+  </div>
+</div>
+
+</section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">© 2025 Torneo Regional de Fútbol</footer>
+
+<script>
+(function(){
+  // Table (desktop)
+  document.querySelectorAll('.calendar-table tbody tr').forEach(row=>{
+    const score = row.getAttribute('data-score');
+    if(!score) return;
+    row.classList.add('played');
+    const [h,a] = score.split('-').map(n=>parseInt(n,10));
+    const homeEl = row.querySelector('.versus .team:first-child b');
+    const awayEl = row.querySelector('.versus .team:last-child  b');
+    if(Number.isFinite(h) && Number.isFinite(a)){
+      if(h>a) homeEl.classList.add('winner');
+      else if(a>h) awayEl.classList.add('winner');
+      else { homeEl.classList.add('draw'); awayEl.classList.add('draw'); }
+    }
+  });
+
+  // Cards (mobile)
+  document.querySelectorAll('.match-card').forEach(card=>{
+    const score = card.getAttribute('data-score');
+    if(!score) return;
+    card.classList.add('played');
+    const [h,a] = score.split('-').map(n=>parseInt(n,10));
+    const homeEl = card.querySelector('.match-versus .team:first-child .name');
+    const awayEl = card.querySelector('.match-versus .team:last-child  .name');
+    if(Number.isFinite(h) && Number.isFinite(a)){
+      if(h>a) homeEl.classList.add('winner');
+      else if(a>h) awayEl.classList.add('winner');
+      else { homeEl.classList.add('draw'); awayEl.classList.add('draw'); }
+    }
+  });
+})();
+</script>
+
+<script>
+/* ===== Tabs Estadísticas ===== */
+document.querySelectorAll('.stats-tabs .tab').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    // activar botón
+    document.querySelectorAll('.stats-tabs .tab').forEach(b=>b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+    // activar panel
+    const id = btn.dataset.tab;
+    document.querySelectorAll('.stats-panel').forEach(p=>{ p.hidden = true; p.classList.remove('is-active'); });
+    const panel = document.getElementById('panel-'+id);
+    if(panel){ panel.hidden = false; panel.classList.add('is-active'); }
+  });
+});
+
+/* ===== Carrusel Galería (botones) ===== */
+document.querySelectorAll('[data-carousel]').forEach(carousel=>{
+  const track = carousel.querySelector('.c-track');
+  carousel.querySelector('.prev').addEventListener('click', ()=> track.scrollBy({left:-360, behavior:'smooth'}));
+  carousel.querySelector('.next').addEventListener('click', ()=> track.scrollBy({left: 360, behavior:'smooth'}));
+});
+</script>
+
+
+  </main>
+
+</body>
+</html>
