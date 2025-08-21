@@ -26,7 +26,7 @@
       "time": "11:00",
       "teamA": "eagles",
       "teamB": "ravens",
-      "scoreA": 12,
+      "scoreA": 1,
       "scoreB": 1,
       "stadium": "Estadio Central"
     },
@@ -46,7 +46,7 @@
       "time": "7:00",
       "teamA": "eagles",
       "teamB": "ravens",
-      "scoreA": 10,
+      "scoreA": 1,
       "scoreB": 1,
       "stadium": "Estadio Central"
     },
@@ -62,6 +62,7 @@
     }
     ,
     {
+      "id": "m07",
       "teamA": "eagles",
       "teamB": "sharks",
       "date": "2025-10-05",
@@ -71,8 +72,19 @@
       "scoreB": null
     },
     {
+      "id": "m08",
       "teamA": "ravens",
       "teamB": "united",
+      "date": "2025-11-05",
+      "time": "10:00",
+      "stadium": "Estadio Ravens",
+      "scoreA": null,
+      "scoreB": null
+    },
+    {
+      "id": "m09",
+      "teamA": "united",
+      "teamB": "eagles",
       "date": "2025-11-05",
       "time": "10:00",
       "stadium": "Estadio Ravens",

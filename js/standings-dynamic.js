@@ -2,6 +2,13 @@
 // Genera la tabla de posiciones y cards de forma dinámica
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Obtener el parámetro 'team' de la URL
+  function getCurrentTeamId() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('team');
+  }
+  const currentTeamId = getCurrentTeamId();
+
   Promise.all([
     fetch('data/matches.json').then(r => r.json()),
     fetch('data/teams.json').then(r => r.json())
@@ -60,8 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (tbody) {
       tbody.innerHTML = '';
       standings.forEach((team, idx) => {
+        const isCurrent = team.id === currentTeamId;
         tbody.innerHTML += `
-          <tr${idx === 0 ? ' class="is-leader"' : idx >= standings.length-2 ? ' class="is-bottom"' : ''}>
+          <tr${isCurrent ? ' class="is-current"' : ''}>
             <td>${idx+1}</td>
             <td class="t"><img src="${team.logo}" alt="${team.name}" class="logo sm"> ${team.name}</td>
             <td>${team.stats.played}</td><td>${team.stats.won}</td><td>${team.stats.draw}</td><td>${team.stats.lost}</td>
@@ -75,8 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (cards) {
       cards.innerHTML = '';
       standings.forEach((team, idx) => {
+        const isCurrent = team.id === currentTeamId;
         cards.innerHTML += `
-          <li class="standing-card${idx === 0 ? ' is-leader' : idx >= standings.length-2 ? ' is-bottom' : ''}">
+          <li class="standing-card${isCurrent ? ' is-current' : ''}">
             <span class="rank">${idx+1}</span>
             <img src="${team.logo}" class="logo sm" alt="${team.name}">
             <span class="name">${team.name}</span>

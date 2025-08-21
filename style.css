@@ -1,3 +1,11 @@
+/* Resalta el equipo actual en standings */
+.standings-table tr.is-current td {
+  background: #ffe96a !important;
+}
+.standing-card.is-current {
+  background: #ffe96a !important;
+  box-shadow: 0 0 0 2px #ffe96a;
+}
 /* Estilos mejorados para los filtros del calendario */
 .calendar-filters {
   background: var(--green-800);
@@ -24,7 +32,6 @@
   .calendar-filters label {
     font-size: 14px;
   }
-}
 }
 .calendar-filters label {
   font-weight: 700;
