@@ -2,7 +2,7 @@
 @media (max-width: 900px) {
   .p-row {
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     margin-bottom: 6px;
   }
@@ -11,7 +11,7 @@
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* alinea el nombre con el borde superior del número */
     align-items: flex-start;
     overflow: hidden;
   }
@@ -26,7 +26,7 @@
 @media (max-width: 600px) {
   .p-row {
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-start;
     gap: 6px;
     margin-bottom: 4px;
   }
@@ -35,7 +35,7 @@
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* alinea el nombre al tope */
     align-items: flex-start;
     overflow: hidden;
   }
@@ -66,6 +66,8 @@
   }
   .p-name {
     font-size: 1em;
+    line-height: 1.08; /* más compacto en tablet */
+    margin-bottom: 1px;
   }
   .p-docid {
     font-size: 0.95em;
@@ -104,6 +106,8 @@
   }
   .p-name {
     font-size: 0.95em;
+    line-height: 1.05; /* aún más compacto en móvil */
+    margin-bottom: 1px;
   }
   .p-docid {
     font-size: 0.9em;
@@ -118,8 +122,8 @@
 /* Estilos para la plantilla alineada como la referencia */
 .p-row {
   display: flex;
-  align-items: center;
-  margin-left: 20px;
+  align-items: flex-start;
+  margin-left: 0;
 }
 
 .p-meta {
@@ -621,7 +625,8 @@
 .teams-wrap{ padding: 8px 24px 4px; }
 .team-grid{
   display:grid; gap:20px;
-  grid-template-columns: repeat(4, 1fr);
+  /* Grid fluido: se adapta a cualquier ancho */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 .team-card{
   display:flex; gap:14px; align-items:center;
@@ -689,14 +694,11 @@
 
 /* ===================== Responsive de nuevas secciones ===================== */
 @media (max-width: 1100px){
-  .team-grid{ grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 900px){
-  .team-grid{ grid-template-columns: repeat(2, 1fr); }
   .calendar td, .calendar th, .standings td, .standings th{ padding:10px; font-size:15px; }
 }
 @media (max-width: 600px){
-  .team-grid{ grid-template-columns: 1fr; }
   .calendar .logo{ width:26px; height:26px; }
   .calendar .vs{ margin:0 8px; }
   .logo.sm{ width:20px; height:20px; }
@@ -849,7 +851,7 @@ b.draw,   .name.draw   { color:#555; }
 .c-btn.prev{ left:8px; } .c-btn.next{ right:8px; }
 
 /* ===== NOTICIAS ===== */
-.news-wrap{ padding: 0 24px 28px; display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; }
+.news-wrap{ padding: 0 24px 28px; display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }
 .news-card{
   background: var(--card); color: var(--text); border-radius:16px; padding:16px;
   box-shadow:0 10px 22px rgba(0,0,0,.16);
@@ -857,8 +859,7 @@ b.draw,   .name.draw   { color:#555; }
 .news-card time{ display:block; font-weight:900; color:#0f6a43; margin-bottom:6px; }
 .news-card h3{ margin:0 0 8px; color:#0e2b1d; }
 
-@media (max-width:900px){ .news-wrap{ grid-template-columns: 1fr 1fr; } }
-@media (max-width:600px){ .news-wrap{ grid-template-columns: 1fr; } }
+/* Grid fluido para noticias: sin overrides necesarios */
 
 /* ===== PATROCINADORES (marquee limpio) ===== */
 .sponsors-wrap{
@@ -936,7 +937,7 @@ b.draw,   .name.draw   { color:#555; }
 /* Info cards */
 .info-cards{
   padding: 8px 24px 8px;
-  display:grid; gap:18px; grid-template-columns: repeat(4, 1fr);
+  display:grid; gap:18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 .info-cards .card h3{ margin:0 0 6px; font-size:16px; font-weight:900; color:#0e2b1d; }
 .info-cards .card p{ margin:0; font-weight:800; color:#15422c; }
@@ -946,19 +947,21 @@ b.draw,   .name.draw   { color:#555; }
 
 .roster-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 24px;
+  justify-items: center;
+  padding: 0 24px 28px
 }
 
 @media (max-width: 1100px) {
   .roster-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   }
 }
 
 @media (max-width: 700px) {
   .roster-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   }
 }
 .player-card {
@@ -967,12 +970,13 @@ b.draw,   .name.draw   { color:#555; }
   border-radius: 24px;
   overflow: visible;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  padding: 24px 16px 16px 16px;
+  padding: 16px 12px 12px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 240px;
-  max-width: 280px;
+  width: 100%;
+  max-width: 230px; /* más delgada */
+  justify-self: center;
 }
 
 
@@ -981,7 +985,7 @@ b.draw,   .name.draw   { color:#555; }
 .player-photo {
   display: block;
   width: 120px;
-  height: 150px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   margin: 0 auto 12px auto;
   object-fit: cover;
@@ -991,7 +995,7 @@ b.draw,   .name.draw   { color:#555; }
 
 .p-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* alinea el tope del texto con el tope del número */
   gap: 12px;
   margin-top: 0;
   margin-bottom: 8px;
@@ -1014,7 +1018,8 @@ b.draw,   .name.draw   { color:#555; }
   font-size: 1.15em;
   font-weight: 600;
   color: #222;
-  margin-bottom: 2px;
+  margin: 0 0 2px 0; /* elimina margen superior */
+  line-height: 1.15; /* reduce aire arriba */
 }
 
 /* ID del jugador debajo del nombre */
@@ -1057,23 +1062,10 @@ b.draw,   .name.draw   { color:#555; }
 .name.draw{ color:#666; }
 
 
-/* ===== Fix Plantilla: fotos cuadradas, bordes limpios ===== */
-
-
-
-/* Foto del jugador: siempre cuadrada y cubierta */
-.player-photo{
-  display: block;
-  width: 120px;
-  height: 180px;
-  border-radius: 50%;
-  margin: 24px auto 0 auto;
-  object-fit: none;
-}
-
-/* Meta del jugador igual que antes */
+/* ===== Fix Plantilla (limpieza de duplicados) ===== */
+/* Mantener .player-photo unificada más arriba; no redefinir aquí. */
 .p-meta{ padding:10px 12px; }
-.p-row{ display:flex; align-items:center; gap:8px; margin-left: 20px;}
+/* .p-row ajustes previos unificados arriba */
 
 
 
@@ -1081,19 +1073,14 @@ b.draw,   .name.draw   { color:#555; }
 
 /* Responsive */
 @media (max-width:1100px){
-  .roster-grid{ grid-template-columns: repeat(4, 1fr); }
-  .info-cards{ grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width:900px){
   .team-hero{ grid-template-columns: 1fr; }
   .team-photo img{ min-height:220px; }
   .team-matches{ grid-template-columns: 1fr; }
-  .roster-grid{ grid-template-columns: repeat(3, 1fr); }
-  .info-cards{ grid-template-columns: repeat(2, 1fr); }
+  
 }
 @media (max-width:600px){
-  .roster-grid{ grid-template-columns: repeat(2, 1fr); }
-  .info-cards{ grid-template-columns: 1fr; }
 }
 
 /* ===== Interna de Partido (unificada) ===== */
