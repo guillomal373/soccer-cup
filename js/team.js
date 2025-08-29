@@ -19,6 +19,34 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function mostrarEquipo(equipo) {
+  // Roster: render players from data/teams.json -> teams[].players
+  const roster = document.querySelector('.roster-grid');
+  if (roster && Array.isArray(equipo.players)) {
+    const folder = equipo.id; // image folder matches team id
+    const cards = equipo.players.map((p, idx) => {
+      const jersey = typeof p.number === 'number' ? p.number : (parseInt(String(p.id).replace(/[^0-9]/g, ''), 10) || idx + 1);
+      const name = p.name || '-';
+      const docId = p.numId || p.docId || '';
+      const pos = p.position || '';
+      const img = `img/${folder}/${p.id}.png`;
+      return `
+        <article class="player-card">
+          <img src="${img}" alt="${name}" class="player-photo" onerror="this.src='img/${folder}/p01.png'">
+          <div class="p-meta">
+            <div class="p-row">
+              <span class="p-number">${jersey}</span>
+              <div class="p-info">
+                <h3 class="p-name">${name}</h3>
+                <span class="p-docid">ID: ${docId}</span>
+              </div>
+            </div>
+            <span class="p-pos chip">${pos}</span>
+          </div>
+        </article>`;
+    }).join('');
+    roster.innerHTML = cards;
+  }
+
   // Render matches dynamically
   fetch('data/matches.json')
     .then(response => response.json())
@@ -90,6 +118,12 @@ function mostrarEquipo(equipo) {
   const heroName = document.getElementById('team-hero-name');
   if (heroName) {
     heroName.textContent = equipo.name;
+  }
+  // Team photo under hero: folder depends on team id
+  const heroPhoto = document.querySelector('.team-photo img');
+  if (heroPhoto) {
+    heroPhoto.src = `img/${equipo.id}/equipo.jpg`;
+    heroPhoto.alt = `Plantel completo de ${equipo.name}`;
   }
   // Tags (city, founded, stadium)
   const heroTags = document.getElementById('team-hero-tags');
