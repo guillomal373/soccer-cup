@@ -187,9 +187,13 @@
         </select>
       </label>
       -->
-      <label>
+      <label class="date-filter">
         Fecha:
-        <input type="date" id="filter-date-from"> a <input type="date" id="filter-date-to">
+        <span class="date-range">
+          <input type="date" id="filter-date-from">
+          <span class="sep">a</span>
+          <input type="date" id="filter-date-to">
+        </span>
       </label>
     </section>
 <section class="calendar-wrap">
@@ -238,8 +242,8 @@
     </tbody>
   </table>
 
-  <!-- Mobile: CARDS (same data) -->
-  <!-- <div class="calendar-cards">
+  <!-- Mobile: CARDS (render dinámico) -->
+  <div class="calendar-cards">
     <article class="match-card" data-home="Eagles" data-away="Ravens" data-score="2-1">
       <div class="match-meta">
         <span class="date">15 Jun</span> · <span class="time">3:00 PM</span>
@@ -282,7 +286,7 @@
       </div>
     </article>
 
-  </div> -->
+  </div>
 </section>
 
 <!-- ===================== POSICIONES ===================== -->
