@@ -2,12 +2,12 @@
   "teams": [
     {
       "id": "eagles",
-      "name": "eagles",
+      "name": "Santa fé",
       "logo": "img/eagles/logo.png",
       "city": "Ciudad Ejemplo",
       "founded": 1998,
       "stadium": "Estadio Municipal",
-        "colors": ["#165b3a", "#21a36c", "#ffffff"],
+        "colors": ["white","red"],
         "players": [
           {"id": "p01", "numId": "80198801","name": "J. Apellido", "position": "Delantero"},
           {"id": "p02", "numId": "80198802","name": "J. Apellido", "position": "Defensa"},
@@ -24,12 +24,12 @@
     },
     {
       "id": "ravens",
-      "name": "Ravens",
+      "name": "Millonarios",
       "logo": "img/ravens/logo.png",
       "city": "Ciudad Ejemplo",
       "founded": 2001,
       "stadium": "Estadio Ravens",
-        "colors": ["#172a4a", "#e63946", "#ffffff"],
+        "colors": ["white", "blue"],
         "players": [
         {"id": "p01", "numId": "80198801","name": "J. Apellido", "position": "Delantero"},
         {"id": "p02", "numId": "80198802","name": "J. Apellido", "position": "Defensa"},
@@ -40,7 +40,7 @@
     },
     {
       "id": "sharks",
-      "name": "Sharks",
+      "name": "Chile",
       "logo": "img/sharks/logo.png",
       "city": "Ciudad Ejemplo",
       "founded": 2005,

@@ -1,95 +1,126 @@
 {
-  "matches": [
-    {
-      "id": "m01",
-      "date": "2025-08-01",
-      "time": "8:00",
-      "teamA": "eagles",
-      "teamB": "ravens",
-      "scoreA": 1,
-      "scoreB": 1,
-      "stadium": "Estadio Central"
-    },
-    {
-      "id": "m02",
-      "date": "2025-08-05",
-      "time": "10:00",
-      "teamA": "sharks",
-      "teamB": "united",
-      "scoreA": 0,
-      "scoreB": 3,
-      "stadium": "Estadio Norte"
-    },
-    {
-      "id": "m03",
-      "date": "2025-08-01",
-      "time": "11:00",
-      "teamA": "eagles",
-      "teamB": "sharks",
-      "scoreA": 1,
-      "scoreB": 1,
-      "stadium": "Estadio Central"
-    },
-    {
-      "id": "m04",
-      "date": "2025-08-05",
-      "time": "12:00",
-      "teamA": "sharks",
-      "teamB": "united",
-      "scoreA": 0,
-      "scoreB": 3,
-      "stadium": "Estadio Norte"
-    },
-    {
-      "id": "m05",
-      "date": "2025-08-01",
-      "time": "7:00",
-      "teamA": "eagles",
-      "teamB": "united",
-      "scoreA": 1,
-      "scoreB": 1,
-      "stadium": "Estadio Central"
-    },
-    {
-      "id": "m06",
-      "date": "2025-08-05",
-      "time": "9:00",
-      "teamA": "sharks",
-      "teamB": "united",
-      "scoreA": 0,
-      "scoreB": 3,
-      "stadium": "Estadio Norte"
-    }
-    ,
-    {
-      "id": "m07",
-      "teamA": "eagles",
-      "teamB": "sharks",
-      "date": "2025-10-05",
-      "time": "11:00",
-      "stadium": "Estadio Municipal",
-      "scoreA": null,
-      "scoreB": null
-    },
-    {
-      "id": "m08",
-      "teamA": "ravens",
-      "teamB": "united",
-      "date": "2025-11-05",
-      "time": "10:00",
-      "stadium": "Estadio Ravens",
-      "scoreA": null,
-      "scoreB": null
-    },
-    {
-      "id": "m09",
-      "teamA": "united",
-      "teamB": "eagles",
-      "date": "2025-11-05",
-      "time": "10:00",
-      "stadium": "Estadio Ravens",
-      "scoreA": null,
-      "scoreB": null
-    }
-  ]
+  "matches": 
+  [
+  {
+    "id": "m01",
+    "date": "2025-06-07",
+    "time": "07:00",
+    "teamA": "eagles",
+    "teamB": "united",
+    "scoreA": 2,
+    "scoreB": 0,
+    "stadium": "Estadio Central"
+  },
+  {
+    "id": "m02",
+    "date": "2025-06-07",
+    "time": "09:00",
+    "teamA": "ravens",
+    "teamB": "sharks",
+    "scoreA": 0,
+    "scoreB": 2,
+    "stadium": "Estadio Norte"
+  },
+  {
+    "id": "m03",
+    "date": "2025-06-14",
+    "time": "07:00",
+    "teamA": "eagles",
+    "teamB": "sharks",
+    "scoreA": 3,
+    "scoreB": 0,
+    "stadium": "Estadio Central"
+  },
+  {
+    "id": "m04",
+    "date": "2025-06-14",
+    "time": "09:00",
+    "teamA": "united",
+    "teamB": "ravens",
+    "scoreA": 2,
+    "scoreB": 4,
+    "stadium": "Estadio Norte"
+  },
+  {
+    "id": "m05",
+    "date": "2025-06-21",
+    "time": "07:00",
+    "teamA": "eagles",
+    "teamB": "ravens",
+    "scoreA": 3,
+    "scoreB": 0,
+    "stadium": "Estadio Central"
+  },
+  {
+    "id": "m06",
+    "date": "2025-06-21",
+    "time": "09:00",
+    "teamA": "sharks",
+    "teamB": "united",
+    "scoreA": 2,
+    "scoreB": 2,
+    "stadium": "Estadio Norte"
+  },
+  {
+    "id": "m07",
+    "date": "2025-06-28",
+    "time": "07:00",
+    "teamA": "united",
+    "teamB": "eagles",
+    "scoreA": 1,
+    "scoreB": 3,
+    "stadium": "Estadio Central"
+  },
+  {
+    "id": "m08",
+    "date": "2025-06-28",
+    "time": "09:00",
+    "teamA": "sharks",
+    "teamB": "ravens",
+    "scoreA": null,
+    "scoreB": null,
+    "stadium": "Estadio Norte"
+  },
+  {
+    "id": "m09",
+    "date": "2025-07-05",
+    "time": "07:00",
+    "teamA": "sharks",
+    "teamB": "eagles",
+    "scoreA": null,
+    "scoreB": null,
+    "stadium": "Estadio Central"
+  },
+  {
+    "id": "m10",
+    "date": "2025-07-05",
+    "time": "09:00",
+    "teamA": "ravens",
+    "teamB": "united",
+    "scoreA": null,
+    "scoreB": null,
+    "stadium": "Estadio Norte"
+  },
+  {
+    "id": "m11",
+    "date": "2025-07-12",
+    "time": "07:00",
+    "teamA": "ravens",
+    "teamB": "eagles",
+    "scoreA": null,
+    "scoreB": null,
+    "stadium": "Estadio Central"
+  },
+  {
+    "id": "m12",
+    "date": "2025-07-12",
+    "time": "09:00",
+    "teamA": "united",
+    "teamB": "sharks",
+    "scoreA": null,
+    "scoreB": null,
+    "stadium": "Estadio Norte"
+  }
+]
+
 }

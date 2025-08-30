@@ -27,7 +27,6 @@ function mostrarEquipos(equipos) {
         <span class="team-colors">
           <i style="background:${equipo.colors && equipo.colors[0] ? equipo.colors[0] : '#165b3a'}"></i>
           <i style="background:${equipo.colors && equipo.colors[1] ? equipo.colors[1] : '#21a36c'}"></i>
-          <i style="background:${equipo.colors && equipo.colors[2] ? equipo.colors[2] : '#ffffff'}"></i>
         </span>
       </div>
     `;
