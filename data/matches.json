@@ -16,7 +16,7 @@
       "events": [
         { "minute": 18, "type": "goal", "teamId": "eagles", "playerId": "p01" },
         { "minute": 42, "type": "yc",   "teamId": "united", "playerId": "p02" },
-        { "minute": 66, "type": "goal", "teamId": "eagles", "playerId": "p02" },
+        { "minute": 66, "type": "goal", "teamId": "eagles", "playerId": "p04" },
         { "minute": 78, "type": "yc",   "teamId": "eagles", "playerId": "p03" },
         { "minute": 78, "type": "rc",   "teamId": "eagles", "playerId": "p03" },
         { "minute": 78, "type": "rc",   "teamId": "eagles", "playerId": "p04" }
@@ -58,7 +58,7 @@
       "away": { "id": "sharks", "score": 0 },
       "events": [
         { "minute": 11, "type": "goal", "teamId": "eagles", "playerId": "p01" },
-        { "minute": 39, "type": "goal", "teamId": "eagles", "playerId": "p02" },
+        { "minute": 39, "type": "goal", "teamId": "eagles", "playerId": "p05" },
         { "minute": 74, "type": "goal", "teamId": "eagles", "playerId": "p01" },
         { "minute": 63, "type": "yc",   "teamId": "sharks", "playerId": "p03" },
         { "minute": 78, "type": "rc",   "teamId": "eagles", "playerId": "p03" }

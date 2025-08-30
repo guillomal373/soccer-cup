@@ -23,8 +23,9 @@
       <ul class="nav-list">
         <!-- <li><a href="index.html#about">Acerca</a></li> -->
         <li><a href="index.html#teams">Equipos</a></li>
-        <li><a href="index.html#matches">Partidos</a></li>
         <li><a href="index.html#standings">Posiciones</a></li>
+        <li><a href="index.html#matches">Partidos</a></li>
+        <li><a href="index.html#panel-scorers">Goleadores</a></li>
         <!-- <li><a href="index.html#stats">Estadísticas</a></li> -->
         <!-- <li><a href="index.html#gallery">Galería</a></li> -->
         <!-- <li><a href="index.html#news">Noticias</a></li> -->
@@ -149,6 +150,33 @@
   <div class="team-grid" id="teams-container"></div>
 </section>
 
+<!-- ===================== POSICIONES ===================== -->
+<header class="section-head" id="standings">
+  <h1 class="section-title">Tabla de Posiciones</h1>
+  <p class="section-sub">Ranking con PJ, PG, PE, PP, GF, GC, DG y Puntos.</p>
+</header>
+<section class="table-wrap">
+  <!-- Desktop: TABLE -->
+  <table class="standings standings-table">
+    <thead>
+      <tr>
+        <th>#</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th>
+        <th>GF</th><th>GC</th><th>DG</th><th>Pts</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <!-- Mobile: CARDS -->
+  <ol class="standings-cards">
+    <li class="standing-card is-leader">
+    </li>
+    <li class="standing-card">
+    </li>
+  </ol>
+</section>
+
 <!-- ===================== CALENDARIO ===================== -->
 <header class="section-head" id="matches">
   <h1 class="section-title">Calendario de Partidos</h1>
@@ -187,9 +215,13 @@
         </select>
       </label>
       -->
-      <label>
+      <label class="date-filter">
         Fecha:
-        <input type="date" id="filter-date-from"> a <input type="date" id="filter-date-to">
+        <span class="date-range">
+          <input type="date" id="filter-date-from">
+          <span class="sep">a</span>
+          <input type="date" id="filter-date-to">
+        </span>
       </label>
     </section>
 <section class="calendar-wrap">
@@ -238,8 +270,8 @@
     </tbody>
   </table>
 
-  <!-- Mobile: CARDS (same data) -->
-  <!-- <div class="calendar-cards">
+  <!-- Mobile: CARDS (render dinámico) -->
+  <div class="calendar-cards">
     <article class="match-card" data-home="Eagles" data-away="Ravens" data-score="2-1">
       <div class="match-meta">
         <span class="date">15 Jun</span> · <span class="time">3:00 PM</span>
@@ -282,72 +314,38 @@
       </div>
     </article>
 
-  </div> -->
+  </div>
 </section>
 
-<!-- ===================== POSICIONES ===================== -->
-<header class="section-head" id="standings">
-  <h1 class="section-title">Tabla de Posiciones</h1>
-  <p class="section-sub">Ranking con PJ, PG, PE, PP, GF, GC, DG y Puntos.</p>
-</header>
-<section class="table-wrap">
-  <!-- Desktop: TABLE -->
-  <table class="standings standings-table">
-    <thead>
-      <tr>
-        <th>#</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th>
-        <th>GF</th><th>GC</th><th>DG</th><th>Pts</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
 
-  <!-- Mobile: CARDS -->
-  <ol class="standings-cards">
-    <li class="standing-card is-leader">
-    </li>
-    <li class="standing-card">
-    </li>
-  </ol>
+
+<!-- ===================== GOLEADORES (Top del torneo) ===================== -->
+<header class="section-head" id="panel-scorers">
+  <h1 class="section-title">Goleadores</h1>
+  <p class="section-sub">Top 8 goleadores del torneo.</p>
+  </header>
+<section class="scorers" id="tournament-scorers" hidden>
+  <div class="scorers-top" id="t-scorers-top"></div>
+  <ol class="scorers-list" id="t-scorers-list"></ol>
+  <div class="scorers-empty" id="t-scorers-empty" hidden>No hay goles registrados aún.</div>
 </section>
 
 <!-- ===================== ESTADÍSTICAS ===================== -->
 <header class="section-head" id="stats">
   <h1 class="section-title">Estadísticas</h1>
-  <p class="section-sub">Goleadores, tarjetas y portero menos vencido.</p>
+  <p class="section-sub">Tarjetas y Menos valla vencida.</p>
 </header>
 <section class="stats-wrap">
   <!-- Tabs -->
   <div class="stats-tabs" role="tablist" aria-label="Tabs estadísticas">
-  <button class="tab is-active" data-tab="scorers">Goleadores</button>
-    <button class="tab" data-tab="cards">Tarjetas</button>
-    <button class="tab" data-tab="keepers">Portero menos vencido</button>
+    <button class="tab is-active" data-tab="cards">Tarjetas</button>
+    <button class="tab" data-tab="keepers">Menos valla vencida</button>
   </div>
 
-  <!-- Panel: Goleadores -->
-  <div class="stats-panel is-active" id="panel-scorers" role="tabpanel">
-    <!-- Desktop: table -->
-    <table class="stats-table">
-      <thead>
-        <tr><th>#</th><th>Jugador</th><th>Equipo</th><th>Goles</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>J. Alvarez</td><td><img src="img/eagles.png" class="logo sm" alt=""> Eagles</td><td>5</td></tr>
-        <tr><td>2</td><td>M. Duarte</td><td><img src="img/ravens.png" class="logo sm" alt=""> Ravens</td><td>4</td></tr>
-        <tr><td>3</td><td>L. Ramos</td><td><img src="img/united.png" class="logo sm" alt=""> United</td><td>3</td></tr>
-      </tbody>
-    </table>
-    <!-- Mobile: cards -->
-    <ol class="stats-cards">
-      <li class="stat-card"><span class="rank">1</span><span class="name">J. Alvarez</span><span class="team"><img src="img/eagles.png" class="logo sm" alt=""> Eagles</span><span class="value chip">5</span></li>
-      <li class="stat-card"><span class="rank">2</span><span class="name">M. Duarte</span><span class="team"><img src="img/ravens.png" class="logo sm" alt=""> Ravens</span><span class="value chip">4</span></li>
-      <li class="stat-card"><span class="rank">3</span><span class="name">L. Ramos</span><span class="team"><img src="img/united.png" class="logo sm" alt=""> United</span><span class="value chip">3</span></li>
-    </ol>
-  </div>
+  <!-- Panel: Goleadores eliminado (sección dedicada arriba) -->
 
   <!-- Panel: Tarjetas -->
-  <div class="stats-panel" id="panel-cards" role="tabpanel" hidden>
+  <div class="stats-panel is-active" id="panel-cards" role="tabpanel">
     <table class="stats-table">
       <thead>
         <tr><th>#</th><th>Jugador</th><th>Equipo</th><th>Amarillas</th><th>Rojas</th></tr>
@@ -365,23 +363,15 @@
     </ol>
   </div>
 
-  <!-- Panel: Portero menos vencido -->
+  <!-- Panel: Menos valla vencida (Top 10 equipos con menos GC) -->
   <div class="stats-panel" id="panel-keepers" role="tabpanel" hidden>
     <table class="stats-table">
       <thead>
-        <tr><th>#</th><th>Portero</th><th>Equipo</th><th>Goles en contra</th></tr>
+        <tr><th>#</th><th>Equipo</th><th>Goles en contra</th></tr>
       </thead>
-      <tbody>
-        <tr><td>1</td><td>A. Silva</td><td><img src="img/eagles.png" class="logo sm" alt=""> Eagles</td><td>2</td></tr>
-        <tr><td>2</td><td>R. Nieto</td><td><img src="img/ravens.png" class="logo sm" alt=""> Ravens</td><td>3</td></tr>
-        <tr><td>3</td><td>G. Villa</td><td><img src="img/united.png" class="logo sm" alt=""> United</td><td>6</td></tr>
-      </tbody>
+      <tbody id="keepers-tbody"></tbody>
     </table>
-    <ol class="stats-cards">
-      <li class="stat-card"><span class="rank">1</span><span class="name">A. Silva</span><span class="team"><img src="img/eagles.png" class="logo sm" alt=""> Eagles</span><span class="value chip">GC 2</span></li>
-      <li class="stat-card"><span class="rank">2</span><span class="name">R. Nieto</span><span class="team"><img src="img/ravens.png" class="logo sm" alt=""> Ravens</span><span class="value chip">GC 3</span></li>
-      <li class="stat-card"><span class="rank">3</span><span class="name">G. Villa</span><span class="team"><img src="img/united.png" class="logo sm" alt=""> United</span><span class="value chip">GC 6</span></li>
-    </ol>
+    <ol class="stats-cards" id="keepers-cards"></ol>
   </div>
 </section>
 
@@ -464,6 +454,9 @@
 <script src="js/teams.js"></script>
 <script src="js/summary.js"></script>
 <script src="js/standings-dynamic.js"></script>
+<script src="js/scorers-top.js"></script>
+<script src="js/cards-dynamic.js"></script>
+<script src="js/keepers-dynamic.js"></script>
 
 </main>
 

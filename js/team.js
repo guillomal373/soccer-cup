@@ -119,6 +119,77 @@ function mostrarEquipo(equipo) {
           `;
         }).join('');
       }
+      // Compute and render Top 8 scorers for this team
+      try {
+        const goalsByPlayer = {};
+        played.forEach(match => {
+          (match.events || []).forEach(ev => {
+            if (ev && ev.type === 'goal' && ev.teamId === equipo.id && ev.playerId) {
+              goalsByPlayer[ev.playerId] = (goalsByPlayer[ev.playerId] || 0) + 1;
+            }
+          });
+        });
+
+        const scorers = Object.entries(goalsByPlayer).map(([pid, goals]) => {
+          const meta = (equipo.players || []).find(p => p.id === pid) || {};
+          return {
+            id: pid,
+            goals,
+            name: meta.name || pid,
+            pos: meta.position || '',
+            img: `img/${equipo.id}/${pid}.png`
+          };
+        }).sort((a,b) => b.goals - a.goals).slice(0,8);
+
+        const section = document.getElementById('team-scorers');
+        const header = document.getElementById('goals');
+        const top = document.getElementById('scorers-top');
+        const list = document.getElementById('scorers-list');
+        const empty = document.getElementById('scorers-empty');
+
+        if (!section || !top || !list) return;
+        if (!scorers.length) {
+          // Sin goles: oculta la sección y el encabezado
+          if (section) section.hidden = true;
+          if (header) header.style.display = 'none';
+          return;
+        }
+
+        // Hay datos: mostrar la sección
+        section.hidden = false;
+        if (header) header.style.display = '';
+        if (empty) empty.hidden = true;
+
+        const top3 = scorers.slice(0,3).map((s, i) => `
+          <div class="s-top rank-${i+1}">
+            <div class="avatar">
+              <img src="${s.img}" alt="${s.name}" onerror="this.src='img/${equipo.id}/p01.png'">
+              <span class="badge">${s.goals}</span>
+            </div>
+            <div class="name">${s.name}</div>
+            <div class="sub">${s.pos}</div>
+          </div>
+        `).join('');
+        top.innerHTML = top3;
+
+        const rest = scorers.slice(3).map((s, i) => `
+          <li>
+            <span class="num">${i+4}</span>
+            <span class="who">
+              <img class="mini" src="${s.img}" alt="${s.name}" onerror="this.src='img/${equipo.id}/p01.png'"> ${s.name}
+              <span class="pos">${s.pos ? '· ' + s.pos : ''}</span>
+            </span>
+            <span class="g">${s.goals}</span>
+          </li>
+        `).join('');
+        list.innerHTML = rest;
+      } catch (_) {
+        // si algo falla, ocultar el bloque
+        const section = document.getElementById('team-scorers');
+        const header = document.getElementById('goals');
+        if (section) section.hidden = true;
+        if (header) header.style.display = 'none';
+      }
     });
   // Render hero section: logo, name, position, tags
   // Logo

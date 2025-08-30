@@ -224,6 +224,11 @@
   outline: none;
   transition: border-color .2s;
 }
+.calendar-filters .date-filter .date-range{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
 .calendar-filters select:focus,
 .calendar-filters input[type="date"]:focus {
   border-color: var(--chip);
@@ -240,6 +245,19 @@
   }
   .calendar-filters label {
     font-size: 14px;
+  }
+  /* Date range: stack in small screens */
+  .calendar-filters .date-filter .date-range{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+  .calendar-filters .date-filter input[type="date"]{
+    width: 100%;
+  }
+  .calendar-filters .date-filter .date-range .sep{
+    display: none; /* ocultar el separador en móvil */
   }
 }
 /* Icono de ganador en partidos jugados */
@@ -637,7 +655,7 @@
 }
 .team-card:hover{ transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0,0,0,.22); }
 .badge{
-  width:64px; height:64px; border-radius:14px; flex:0 0 64px;
+  width:40px; height:40px; border-radius:14px; flex:0 0 64px;
   background: linear-gradient(135deg, var(--c1,#0d6b41), var(--c2,#1ca368));
   display:flex; align-items:center; justify-content:center;
 }
@@ -1206,3 +1224,83 @@ b.draw,   .name.draw   { color:#555; }
   border-radius: 10px;
 }
 .login:hover { background: rgba(255,255,255,.18); }
+
+/* ===== Roster Responsive Fixes (team.html) ===== */
+/* Ensure cards align like the reference in responsive */
+.player-card{ box-sizing: border-box; }
+.roster-grid{ justify-items: center; }
+@media (max-width: 900px){
+  .roster-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); gap:16px; padding:0 16px 24px; }
+  .player-card{ max-width: 300px; }
+}
+@media (max-width: 700px){
+  .roster-grid{ grid-template-columns: 1fr; gap:12px; padding:0 12px 20px; }
+  .player-card{ width:100%; max-width: 100%; margin:8px 0; padding:12px 12px 10px; }
+  .player-photo{ width: 90px; height: 90px; }
+}
+/* ===== Ajustes responsive específicos de Plantilla (team.html) ===== */
+/* Evitar recortes de tarjetas en columnas estrechas */
+.roster-grid { justify-items: stretch; }
+@media (max-width: 900px) {
+  .roster-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; padding: 0 16px 24px; }
+}
+@media (max-width: 700px) {
+  .roster-grid { grid-template-columns: 1fr; gap: 12px; padding: 0 12px 20px; }
+}
+@media (max-width: 600px) {
+  .player-card { width: 100%; max-width: 100%; min-width: 0; margin: 8px 0; padding: 12px 12px 10px; }
+}
+
+/* ===== Goleadores (team.html) ===== */
+.scorers{ padding: 0 24px 28px; }
+.scorers-top{
+  display:grid; grid-template-columns: repeat(3, 1fr); gap:18px;
+  background: rgba(0,0,0,.14);
+  border-radius:16px 16px 0 0;
+  padding: 18px 12px 8px;
+}
+.s-top{
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+  color:#fff;
+}
+.s-top .avatar{
+  position:relative; width:92px; height:92px; border-radius:50%; overflow:visible;
+  background:#fff; box-shadow:0 6px 16px rgba(0,0,0,.25);
+  /* Deja espacio para que el badge no tape el nombre */
+  margin-bottom: 34px;
+}
+.s-top .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
+.s-top .badge{
+  position:absolute; left:50%; transform:translateX(-50%);
+  bottom: -25px; /* baja el cuadro para no tapar la cara */
+  background:#0f6a43; color:#fff; font-weight:900; border-radius:10px;
+  padding:4px 9px; font-size:14px; min-width:28px; text-align:center;
+  box-shadow:0 6px 14px rgba(0,0,0,.3);
+  z-index: 1;
+}
+.s-top.rank-1 .avatar{ width:116px; height:116px; margin-bottom: 40px; }
+.s-top.rank-2 .avatar{ width:104px; height:104px; margin-bottom: 38px; }
+.s-top.rank-3 .avatar{ width:96px;  height:96px;  margin-bottom: 36px; }
+.s-top.rank-1 .badge{ font-size:16px; padding:5px 11px; }
+.s-top .name{ margin:10px 0 2px; font-weight:900; }
+.s-top .sub{ opacity:.9; font-weight:700; font-size:14px; }
+
+.scorers-list{ list-style:none; margin:0; padding:0; border-radius:0 0 16px 16px; overflow:hidden; }
+.scorers-list li{
+  display:grid; grid-template-columns: 34px 1fr auto; align-items:center; gap:10px;
+  padding:12px; background:#fff8ee; color:#123; border-bottom:1px solid #e9efe9;
+}
+.scorers-list li:last-child{ border-bottom:0; }
+.scorers-list .num{ width:26px; height:26px; border-radius:50%; background:#0f6a43; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:900; }
+.scorers-list .mini{ width:28px; height:28px; border-radius:50%; object-fit:cover; margin-right:8px; }
+.scorers-list .who{ display:flex; align-items:center; gap:8px; font-weight:900; color:#0e2b1d; }
+.scorers-list .pos{ font-weight:700; color:#345; margin-left:6px; opacity:.9; }
+.scorers-list .g{ font-weight:900; }
+.scorers-empty{ background: var(--card); color: var(--text); border-radius: 12px; padding: 12px; text-align:center; font-weight:800; }
+
+@media (max-width:900px){
+  .scorers-top{ grid-template-columns: 1fr 1fr 1fr; }
+}
+@media (max-width:600px){
+  .scorers-top{ grid-template-columns: 1fr; gap:12px; border-radius:16px; }
+}
