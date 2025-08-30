@@ -6,6 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const teamId = params.get('team');
   if (!teamId) return;
 
+  // Ajustar links del nav para conservar ?team=ID al navegar por secciones
+  try {
+    document.querySelectorAll('.nav a').forEach(a => {
+      const href = a.getAttribute('href') || '';
+      // Solo reescribir los que apuntan a team.html (secciones internas)
+      if (href.startsWith('team.html#')) {
+        const hash = href.substring(href.indexOf('#')) || '';
+        a.setAttribute('href', `team.html?team=${encodeURIComponent(teamId)}${hash}`);
+      }
+    });
+  } catch (_) { /* noop */ }
+
   fetch('data/teams.json')
     .then(response => response.json())
     .then(data => {

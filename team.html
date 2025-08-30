@@ -11,75 +11,66 @@
     <!-- NAV -->
     <nav class="nav" aria-label="Principal">
       <ul class="nav-list">
-        <li><a href="index.html#about">Acerca</a></li>
-        <li><a href="index.html#teams">Equipos</a></li>
-        <li><a href="index.html#matches">Partidos</a></li>
-        <li><a href="index.html#standings">Posiciones</a></li>
+        <li><a href="team.html#standings">Posiciones</a></li>
+        <li><a href="team.html#matches">Partidos</a></li>
+        <!-- <li><a href="team.html#teams">Equipos</a></li> -->
+        <li><a href="team.html#players">Plantilla</a></li>
+        <!-- <li><a href="index.html">Home</a></li> -->
       </ul>
 
-      <a href="index.html#teams" class="login">← Volver</a>
+      <a href="index.html" class="login">← Home</a>
     </nav>
 
     <!-- HERO EQUIPO -->
-<section class="team-hero">
-  <div class="team-id">
-    <div class="badge" id="team-hero-logo"></div>
-    <div>
-      <h1 class="team-title" id="team-hero-name"></h1>
-      <span class="chip position-chip" id="team-hero-position"></span>
-      <div class="team-tags" id="team-hero-tags"></div>
-    </div>
-  </div>
-  <figure class="team-photo">
-    <img src="img/eagles/equipo.jpg" alt="Plantel completo de Eagles">
-  </figure>
-</section>
+    <section class="team-hero">
+      <div class="team-id">
+        <div class="badge" id="team-hero-logo"></div>
+        <div>
+          <h1 class="team-title" id="team-hero-name"></h1>
+          <span class="chip position-chip" id="team-hero-position"></span>
+          <div class="team-tags" id="team-hero-tags"></div>
+        </div>
+      </div>
+      <figure class="team-photo">
+        <img src="img/eagles/equipo.jpg" alt="Plantel completo de Eagles">
+      </figure>
+    </section>
 
     <!-- INFO BÁSICA -->
     <!-- <header class="section-head">
-      <h2 class="section-title">Información del Equipo</h2>
-      <p class="section-sub">Datos generales del club.</p>
-    </header>
-    <section id="team-info-cards"></section> -->
+    <h2 class="section-title">Información del Equipo</h2>
+    <p class="section-sub">Datos generales del club.</p>
+  </header>
+  <section id="team-info-cards"></section> -->
 
     <!-- ===================== POSICIONES ===================== -->
-<header class="section-head" id="standings">
-  <h1 class="section-title">Tabla de Posiciones</h1>
-  <p class="section-sub">Ranking con PJ, PG, PE, PP, GF, GC, DG y Puntos.</p>
-</header>
-<section class="table-wrap">
-  <!-- Desktop: TABLE -->
-  <table class="standings standings-table">
-    <thead>
-      <tr>
-        <th>#</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th>
-        <th>GF</th><th>GC</th><th>DG</th><th>Pts</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-  <!-- Mobile: CARDS -->
-  <ol class="standings-cards"></ol>
-</section>
-
-<!-- Render dinámico de la tabla de posiciones -->
-<script src="js/standings-dynamic.js"></script>
-
-    <!-- PLANTILLA -->
-    <header class="section-head">
-      <h2 class="section-title">Plantilla</h2>
-      <p class="section-sub">Jugadores, número y posición.</p>
+    <header class="section-head" id="standings">
+      <h1 class="section-title">Tabla de Posiciones</h1>
+      <p class="section-sub">Ranking con PJ, PG, PE, PP, GF, GC, DG y Puntos.</p>
     </header>
-
-    <section class="roster-grid">
+    <section class="table-wrap">
+      <!-- Desktop: TABLE -->
+      <table class="standings standings-table">
+        <thead>
+          <tr>
+            <th>#</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th>
+            <th>GF</th><th>GC</th><th>DG</th><th>Pts</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <!-- Mobile: CARDS -->
+      <ol class="standings-cards"></ol>
     </section>
 
+    <!-- Render dinámico de la tabla de posiciones -->
+    <script src="js/standings-dynamic.js"></script>
+
     <!-- ÚLTIMOS Y PRÓXIMOS PARTIDOS -->
-    <header class="section-head">
+    <header class="section-head" id="matches">
       <h2 class="section-title">Partidos del Equipo</h2>
       <p class="section-sub">Últimos resultados y próximos encuentros.</p>
     </header>
-
     <section class="team-matches">
       <div class="team-col">
         <h3 class="team-col-title">Últimos partidos</h3>
@@ -89,6 +80,14 @@
         <h3 class="team-col-title">Próximos partidos</h3>
         <div class="match-list" id="team-matches-upcoming"></div>
       </div>
+    </section>
+
+    <!-- PLANTILLA -->
+    <header class="section-head" id="players">
+      <h2 class="section-title">Plantilla</h2>
+      <p class="section-sub">Jugadores, número y posición.</p>
+    </header>
+    <section class="roster-grid">
     </section>
 
     <footer class="footer">© 2025 MrValdemar -GAMG</footer>
