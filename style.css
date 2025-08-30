@@ -1129,6 +1129,11 @@ b.draw,   .name.draw   { color:#555; }
 .t-name.draw{ color:#666; }
 .crest{ width:60px; height:60px; border-radius:16px; background:#e9f5ef;
   display:flex; align-items:center; justify-content:center; }
+/* Alinear fondo del icono en match.html como en la referencia */
+.match-header .crest{
+  background: #175f3e; /* verde profundo como la tarjeta de referencia */
+  box-shadow: 0 6px 16px rgba(0,0,0,.18);
+}
 .crest img{ width:40px; height:40px; object-fit:contain; }
 .crest.sm{ width:34px; height:34px; border-radius:10px; }
 .crest.sm img{ width:24px; height:24px; }

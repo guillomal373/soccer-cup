@@ -79,6 +79,14 @@ document.addEventListener('DOMContentLoaded', function() {
           }
           return true;
         });
+        // Navegación al detalle de partido
+        tbody.querySelectorAll('tr[data-match-id]').forEach(tr => {
+          tr.style.cursor = 'pointer';
+          tr.addEventListener('click', () => {
+            const id = tr.getAttribute('data-match-id');
+            if (id) location.href = `match.html?match=${id}`;
+          });
+        });
       }
       // Date filter
       const dateFrom = document.getElementById('filter-date-from')?.value;
@@ -107,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
             else if (scoreB > scoreA) iconB = ballIcon;
           }
           tbody.innerHTML += `
-            <tr data-home="${teamA.name}" data-away="${teamB.name}" data-score="${score}">
+            <tr class="match-row" data-match-id="${match.id}" data-home="${teamA.name}" data-away="${teamB.name}" data-score="${score}">
               <td>${formatDate(match.date)}</td>
               <td>${match.time || ''}</td>
               <td class="versus">
@@ -123,6 +131,14 @@ document.addEventListener('DOMContentLoaded', function() {
               <td class="score${score === '—' ? ' pending' : ''}">${score}</td>
             </tr>
           `;
+        });
+        // Click en filas para abrir el detalle
+        tbody.querySelectorAll('tr[data-match-id]').forEach(tr => {
+          tr.style.cursor = 'pointer';
+          tr.addEventListener('click', () => {
+            const id = tr.getAttribute('data-match-id');
+            if (id) location.href = `match.html?match=${id}`;
+          });
         });
       }
       // Mobile: cards
@@ -142,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
             else if (scoreB > scoreA) iconB = ballIcon;
           }
           cards.innerHTML += `
-            <article class="match-card" data-home="${teamA.name}" data-away="${teamB.name}" data-score="${score}">
+            <article class="match-card" data-match-id="${match.id}" data-home="${teamA.name}" data-away="${teamB.name}" data-score="${score}">
               <div class="match-meta">
                 <span class="date">${formatDate(match.date)}</span> · <span class="time">${match.time || ''}</span>
               </div>

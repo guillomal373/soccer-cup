@@ -1,126 +1,233 @@
 {
-  "matches": 
-  [
-  {
-    "id": "m01",
-    "date": "2025-06-07",
-    "time": "07:00",
-    "teamA": "eagles",
-    "teamB": "united",
-    "scoreA": 2,
-    "scoreB": 0,
-    "stadium": "Estadio Central"
-  },
-  {
-    "id": "m02",
-    "date": "2025-06-07",
-    "time": "09:00",
-    "teamA": "ravens",
-    "teamB": "sharks",
-    "scoreA": 0,
-    "scoreB": 2,
-    "stadium": "Estadio Norte"
-  },
-  {
-    "id": "m03",
-    "date": "2025-06-14",
-    "time": "07:00",
-    "teamA": "eagles",
-    "teamB": "sharks",
-    "scoreA": 3,
-    "scoreB": 0,
-    "stadium": "Estadio Central"
-  },
-  {
-    "id": "m04",
-    "date": "2025-06-14",
-    "time": "09:00",
-    "teamA": "united",
-    "teamB": "ravens",
-    "scoreA": 2,
-    "scoreB": 4,
-    "stadium": "Estadio Norte"
-  },
-  {
-    "id": "m05",
-    "date": "2025-06-21",
-    "time": "07:00",
-    "teamA": "eagles",
-    "teamB": "ravens",
-    "scoreA": 3,
-    "scoreB": 0,
-    "stadium": "Estadio Central"
-  },
-  {
-    "id": "m06",
-    "date": "2025-06-21",
-    "time": "09:00",
-    "teamA": "sharks",
-    "teamB": "united",
-    "scoreA": 2,
-    "scoreB": 2,
-    "stadium": "Estadio Norte"
-  },
-  {
-    "id": "m07",
-    "date": "2025-06-28",
-    "time": "07:00",
-    "teamA": "united",
-    "teamB": "eagles",
-    "scoreA": 1,
-    "scoreB": 3,
-    "stadium": "Estadio Central"
-  },
-  {
-    "id": "m08",
-    "date": "2025-06-28",
-    "time": "09:00",
-    "teamA": "sharks",
-    "teamB": "ravens",
-    "scoreA": null,
-    "scoreB": null,
-    "stadium": "Estadio Norte"
-  },
-  {
-    "id": "m09",
-    "date": "2025-07-05",
-    "time": "07:00",
-    "teamA": "sharks",
-    "teamB": "eagles",
-    "scoreA": null,
-    "scoreB": null,
-    "stadium": "Estadio Central"
-  },
-  {
-    "id": "m10",
-    "date": "2025-07-05",
-    "time": "09:00",
-    "teamA": "ravens",
-    "teamB": "united",
-    "scoreA": null,
-    "scoreB": null,
-    "stadium": "Estadio Norte"
-  },
-  {
-    "id": "m11",
-    "date": "2025-07-12",
-    "time": "07:00",
-    "teamA": "ravens",
-    "teamB": "eagles",
-    "scoreA": null,
-    "scoreB": null,
-    "stadium": "Estadio Central"
-  },
-  {
-    "id": "m12",
-    "date": "2025-07-12",
-    "time": "09:00",
-    "teamA": "united",
-    "teamB": "sharks",
-    "scoreA": null,
-    "scoreB": null,
-    "stadium": "Estadio Norte"
-  }
-]
-
+  "matches": [
+    {
+      "id": "m01",
+      "date": "2025-06-07",
+      "time": "07:00",
+      "round": "J1",
+      "stadium": "Estadio Central",
+      "status": "played",
+      "teamA": "eagles",
+      "teamB": "united",
+      "scoreA": 2,
+      "scoreB": 0,
+      "home": { "id": "eagles", "score": 2 },
+      "away": { "id": "united", "score": 0 },
+      "events": [
+        { "minute": 18, "type": "goal", "teamId": "eagles", "playerId": "p01" },
+        { "minute": 42, "type": "yc",   "teamId": "united", "playerId": "p02" },
+        { "minute": 66, "type": "goal", "teamId": "eagles", "playerId": "p02" },
+        { "minute": 78, "type": "yc",   "teamId": "eagles", "playerId": "p03" },
+        { "minute": 78, "type": "rc",   "teamId": "eagles", "playerId": "p03" },
+        { "minute": 78, "type": "rc",   "teamId": "eagles", "playerId": "p04" }
+      ]
+    },
+    {
+      "id": "m02",
+      "date": "2025-06-07",
+      "time": "09:00",
+      "round": "J1",
+      "stadium": "Estadio Norte",
+      "status": "played",
+      "teamA": "ravens",
+      "teamB": "sharks",
+      "scoreA": 0,
+      "scoreB": 2,
+      "home": { "id": "ravens", "score": 0 },
+      "away": { "id": "sharks", "score": 2 },
+      "events": [
+        { "minute": 12, "type": "goal", "teamId": "sharks", "playerId": "p01" },
+        { "minute": 29, "type": "yc",   "teamId": "ravens", "playerId": "p02" },
+        { "minute": 71, "type": "goal", "teamId": "sharks", "playerId": "p03" },
+        { "minute": 85, "type": "rc",   "teamId": "ravens", "playerId": "p04" },
+        { "minute": 78, "type": "rc",   "teamId": "sharks", "playerId": "p03" }
+      ]
+    },
+    {
+      "id": "m03",
+      "date": "2025-06-14",
+      "time": "07:00",
+      "round": "J2",
+      "stadium": "Estadio Central",
+      "status": "played",
+      "teamA": "eagles",
+      "teamB": "sharks",
+      "scoreA": 3,
+      "scoreB": 0,
+      "home": { "id": "eagles", "score": 3 },
+      "away": { "id": "sharks", "score": 0 },
+      "events": [
+        { "minute": 11, "type": "goal", "teamId": "eagles", "playerId": "p01" },
+        { "minute": 39, "type": "goal", "teamId": "eagles", "playerId": "p02" },
+        { "minute": 74, "type": "goal", "teamId": "eagles", "playerId": "p01" },
+        { "minute": 63, "type": "yc",   "teamId": "sharks", "playerId": "p03" },
+        { "minute": 78, "type": "rc",   "teamId": "eagles", "playerId": "p03" }
+      ]
+    },
+    {
+      "id": "m04",
+      "date": "2025-06-14",
+      "time": "09:00",
+      "round": "J2",
+      "stadium": "Estadio Norte",
+      "status": "played",
+      "teamA": "united",
+      "teamB": "ravens",
+      "scoreA": 2,
+      "scoreB": 4,
+      "home": { "id": "united", "score": 2 },
+      "away": { "id": "ravens", "score": 4 },
+      "events": [
+        { "minute": 7,  "type": "goal", "teamId": "ravens", "playerId": "p01" },
+        { "minute": 19, "type": "goal", "teamId": "united", "playerId": "p03" },
+        { "minute": 33, "type": "goal", "teamId": "ravens", "playerId": "p02" },
+        { "minute": 48, "type": "goal", "teamId": "united", "playerId": "p03" },
+        { "minute": 67, "type": "goal", "teamId": "ravens", "playerId": "p01" },
+        { "minute": 82, "type": "goal", "teamId": "ravens", "playerId": "p03" },
+        { "minute": 71, "type": "yc",   "teamId": "united", "playerId": "p02" },
+        { "minute": 78, "type": "rc",   "teamId": "united", "playerId": "p03" },
+        { "minute": 78, "type": "rc",   "teamId": "united", "playerId": "p03" }
+      ]
+    },
+    {
+      "id": "m05",
+      "date": "2025-06-21",
+      "time": "07:00",
+      "round": "J3",
+      "stadium": "Estadio Central",
+      "status": "played",
+      "teamA": "eagles",
+      "teamB": "ravens",
+      "scoreA": 3,
+      "scoreB": 0,
+      "home": { "id": "eagles", "score": 3 },
+      "away": { "id": "ravens", "score": 0 },
+      "events": [
+        { "minute": 9,  "type": "goal", "teamId": "eagles", "playerId": "p01" },
+        { "minute": 58, "type": "goal", "teamId": "eagles", "playerId": "p02" },
+        { "minute": 77, "type": "goal", "teamId": "eagles", "playerId": "p03" },
+        { "minute": 61, "type": "yc",   "teamId": "ravens", "playerId": "p02" },
+        { "minute": 78, "type": "rc",   "teamId": "eagles", "playerId": "p03" }
+      ]
+    },
+    {
+      "id": "m06",
+      "date": "2025-06-21",
+      "time": "09:00",
+      "round": "J3",
+      "stadium": "Estadio Norte",
+      "status": "played",
+      "teamA": "sharks",
+      "teamB": "united",
+      "scoreA": 2,
+      "scoreB": 2,
+      "home": { "id": "sharks", "score": 2 },
+      "away": { "id": "united", "score": 2 },
+      "events": [
+        { "minute": 14, "type": "goal", "teamId": "sharks",  "playerId": "p02" },
+        { "minute": 28, "type": "goal", "teamId": "united",  "playerId": "p01" },
+        { "minute": 53, "type": "goal", "teamId": "united",  "playerId": "p03" },
+        { "minute": 69, "type": "goal", "teamId": "sharks",  "playerId": "p01" },
+        { "minute": 73, "type": "yc",   "teamId": "sharks",  "playerId": "p02" },
+        { "minute": 75, "type": "yc",   "teamId": "united",  "playerId": "p01" }
+      ]
+    },
+    {
+      "id": "m07",
+      "date": "2025-06-28",
+      "time": "07:00",
+      "round": "J4",
+      "stadium": "Estadio Central",
+      "status": "played",
+      "teamA": "united",
+      "teamB": "eagles",
+      "scoreA": 1,
+      "scoreB": 3,
+      "home": { "id": "united", "score": 1 },
+      "away": { "id": "eagles", "score": 3 },
+      "events": [
+        { "minute": 5,  "type": "goal", "teamId": "eagles", "playerId": "p01" },
+        { "minute": 22, "type": "goal", "teamId": "united", "playerId": "p02" },
+        { "minute": 61, "type": "goal", "teamId": "eagles", "playerId": "p02" },
+        { "minute": 84, "type": "goal", "teamId": "eagles", "playerId": "p01" },
+        { "minute": 70, "type": "yc",   "teamId": "united", "playerId": "p02" },
+        { "minute": 88, "type": "rc",   "teamId": "united", "playerId": "p02" }
+      ]
+    },
+    {
+      "id": "m08",
+      "date": "2025-06-28",
+      "time": "09:00",
+      "round": "J4",
+      "stadium": "Estadio Norte",
+      "status": "scheduled",
+      "teamA": "sharks",
+      "teamB": "ravens",
+      "scoreA": null,
+      "scoreB": null,
+      "home": { "id": "sharks", "score": null },
+      "away": { "id": "ravens", "score": null },
+      "events": []
+    },
+    {
+      "id": "m09",
+      "date": "2025-07-05",
+      "time": "07:00",
+      "round": "J5",
+      "stadium": "Estadio Central",
+      "status": "scheduled",
+      "teamA": "sharks",
+      "teamB": "eagles",
+      "scoreA": null,
+      "scoreB": null,
+      "home": { "id": "sharks", "score": null },
+      "away": { "id": "eagles", "score": null },
+      "events": []
+    },
+    {
+      "id": "m10",
+      "date": "2025-07-05",
+      "time": "09:00",
+      "round": "J5",
+      "stadium": "Estadio Norte",
+      "status": "scheduled",
+      "teamA": "ravens",
+      "teamB": "united",
+      "scoreA": null,
+      "scoreB": null,
+      "home": { "id": "ravens", "score": null },
+      "away": { "id": "united", "score": null },
+      "events": []
+    },
+    {
+      "id": "m11",
+      "date": "2025-07-12",
+      "time": "07:00",
+      "round": "J6",
+      "stadium": "Estadio Central",
+      "status": "scheduled",
+      "teamA": "ravens",
+      "teamB": "eagles",
+      "scoreA": null,
+      "scoreB": null,
+      "home": { "id": "ravens", "score": null },
+      "away": { "id": "eagles", "score": null },
+      "events": []
+    },
+    {
+      "id": "m12",
+      "date": "2025-07-12",
+      "time": "09:00",
+      "round": "J6",
+      "stadium": "Estadio Norte",
+      "status": "scheduled",
+      "teamA": "united",
+      "teamB": "sharks",
+      "scoreA": null,
+      "scoreB": null,
+      "home": { "id": "united", "score": null },
+      "away": { "id": "sharks", "score": null },
+      "events": []
+    }
+  ]
 }
