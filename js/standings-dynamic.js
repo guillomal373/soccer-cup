@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tbody.innerHTML += `
           <tr${isCurrent ? ' class="is-current"' : ''}>
             <td>${idx+1}</td>
-            <td class="t"><img src="${team.logo}" alt="${team.name}" class="logo sm"> ${team.name}</td>
+            <td class="t"><a class="team-link" href="team.html?team=${team.id}"><img src="${team.logo}" alt="${team.name}" class="logo sm"></a> ${team.name}</td>
             <td>${team.stats.played}</td><td>${team.stats.won}</td><td>${team.stats.draw}</td><td>${team.stats.lost}</td>
             <td>${team.stats.goalsFor}</td><td>${team.stats.goalsAgainst}</td><td>${team.stats.goalsFor-team.stats.goalsAgainst >= 0 ? '+' : ''}${team.stats.goalsFor-team.stats.goalsAgainst}</td><td>${team.stats.points}</td>
           </tr>
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
         cards.innerHTML += `
           <li class="standing-card${isCurrent ? ' is-current' : ''}">
             <span class="rank">${idx+1}</span>
-            <img src="${team.logo}" class="logo sm" alt="${team.name}">
+            <a class="team-link" href="team.html?team=${team.id}"><img src="${team.logo}" class="logo sm" alt="${team.name}"></a>
             <span class="name">${team.name}</span>
             <span class="pts chip">${team.stats.points} pts</span>
             <div class="statline">

@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <tr>
         <td>${i + 1}</td>
         <td>${p.name}</td>
-        <td><img src="${p.teamLogo}" class="logo sm" alt=""> ${p.teamName}</td>
+        <td><a class="team-link" href="team.html?team=${p.teamId}"><img src="${p.teamLogo}" class="logo sm" alt="${p.teamName}"></a> ${p.teamName}</td>
         <td>${p.yc}</td>
         <td>${p.rc}</td>
       </tr>
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <li class="stat-card">
         <span class="rank">${i + 1}</span>
         <span class="name">${p.name}</span>
-        <span class="team"><img src="${p.teamLogo}" class="logo sm" alt=""> ${p.teamName}</span>
+        <span class="team"><a class="team-link" href="team.html?team=${p.teamId}"><img src="${p.teamLogo}" class="logo sm" alt="${p.teamName}"></a> ${p.teamName}</span>
         <span class="value chip">${p.yc}A · ${p.rc}R</span>
       </li>
     `).join('');
@@ -75,4 +75,3 @@ document.addEventListener('DOMContentLoaded', () => {
     list.innerHTML = '';
   });
 });
-

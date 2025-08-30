@@ -87,9 +87,9 @@ function mostrarEquipo(equipo) {
             <article class="match-row played" data-score="${match.scoreA}-${match.scoreB}">
               <div class="m-meta">${match.date || ''} · ${match.time || ''} · ${match.stadium || ''}</div>
               <div class="m-vs">
-                <span class="team"><img src="${logoA}" alt="${nameA}"> <b class="name ${winnerA} ${draw}">${nameA}${iconA}</b></span>
+                <span class="team"><a class="team-link" href="team.html?team=${teamA}"><img src="${logoA}" alt="${nameA}"></a> <b class="name ${winnerA} ${draw}">${nameA}${iconA}</b></span>
                 <span class="vs">VS</span>
-                <span class="team"><img src="${logoB}" alt="${nameB}"> <b class="name ${winnerB} ${draw}">${nameB}${iconB}</b></span>
+                <span class="team"><a class="team-link" href="team.html?team=${teamB}"><img src="${logoB}" alt="${nameB}"></a> <b class="name ${winnerB} ${draw}">${nameB}${iconB}</b></span>
                 <span class="score chip">${match.scoreA}–${match.scoreB}</span>
               </div>
             </article>
@@ -110,10 +110,10 @@ function mostrarEquipo(equipo) {
             <article class="match-row">
               <div class="m-meta">${match.date || ''} · ${match.time || ''} · ${match.stadium || ''}</div>
               <div class="m-vs">
-                <span class="team"><img src="${logoA}" alt="${nameA}"> <b class="name">${nameA}</b></span>
+                <span class="team"><a class="team-link" href="team.html?team=${teamA}"><img src="${logoA}" alt="${nameA}"></a> <b class="name">${nameA}</b></span>
                 <span class="vs">VS</span>
-                <span class="team"><img src="${logoB}" alt="${nameB}"> <b class="name">${nameB}</b></span>
-                <span class="score chip pending">—</span>
+                <span class="team"><a class="team-link" href="team.html?team=${teamB}"><img src="${logoB}" alt="${nameB}"></a> <b class="name">${nameB}</b></span>
+                <span class="score chip pending">–</span>
               </div>
             </article>
           `;

@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tbody) tbody.innerHTML = ranking.map((t, i) => `
       <tr>
         <td>${i+1}</td>
-        <td><img src="${t.logo}" class="logo sm" alt="${t.name}"> ${t.name}</td>
+        <td><a class="team-link" href="team.html?team=${t.id}"><img src="${t.logo}" class="logo sm" alt="${t.name}"></a> ${t.name}</td>
         <td>${t.ga}</td>
       </tr>
     `).join('');
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <li class="stat-card">
         <span class="rank">${i+1}</span>
         <span class="name">${t.name}</span>
-        <span class="team"><img src="${t.logo}" class="logo sm" alt="${t.name}"> GC</span>
+        <span class="team"><a class="team-link" href="team.html?team=${t.id}"><img src="${t.logo}" class="logo sm" alt="${t.name}"></a> GC</span>
         <span class="value chip">${t.ga}</span>
       </li>
     `).join('');
@@ -61,4 +61,3 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tbody) tbody.innerHTML = `<tr><td colspan="3" style="text-align:center; font-weight:800;">No se pudo cargar</td></tr>`;
   });
 });
-

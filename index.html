@@ -25,7 +25,7 @@
         <li><a href="index.html#teams">Equipos</a></li>
         <li><a href="index.html#standings">Posiciones</a></li>
         <li><a href="index.html#matches">Partidos</a></li>
-        <li><a href="index.html#panel-scorers">Goleadores</a></li>
+        <li><a href="index.html#goal-scorers">Goleadores</a></li>
         <!-- <li><a href="index.html#stats">Estadísticas</a></li> -->
         <!-- <li><a href="index.html#gallery">Galería</a></li> -->
         <!-- <li><a href="index.html#news">Noticias</a></li> -->
@@ -141,48 +141,49 @@
       </aside>
     </section>
 
-<!-- ===================== EQUIPOS ===================== -->
-<header class="section-head" id="teams">
-  <h1 class="section-title">Equipos</h1>
-  <p class="section-sub">Haga click sobre cada equipo para ver más información, plantilla entre otros </p>
-</header>
-<section class="teams-wrap">
-  <div class="team-grid" id="teams-container"></div>
-</section>
+    <!-- ===================== EQUIPOS ===================== -->
+    <header class="section-head" id="teams">
+      <h1 class="section-title">Equipos</h1>
+      <p class="section-sub">Haga click sobre cada equipo para ver más información, plantilla entre otros </p>
+    </header>
+    <section class="teams-wrap">
+      <div class="team-grid" id="teams-container"></div>
+    </section>
 
-<!-- ===================== POSICIONES ===================== -->
-<header class="section-head" id="standings">
-  <h1 class="section-title">Tabla de Posiciones</h1>
-  <p class="section-sub">Ranking con PJ, PG, PE, PP, GF, GC, DG y Puntos.</p>
-</header>
-<section class="table-wrap">
-  <!-- Desktop: TABLE -->
-  <table class="standings standings-table">
-    <thead>
-      <tr>
-        <th>#</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th>
-        <th>GF</th><th>GC</th><th>DG</th><th>Pts</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
+    <!-- ===================== POSICIONES ===================== -->
+    <header class="section-head" id="standings">
+      <h1 class="section-title">Tabla de Posiciones</h1>
+      <p class="section-sub">Ranking con PJ, PG, PE, PP, GF, GC, DG y Puntos.</p>
+    </header>
+    <section class="table-wrap">
+      <!-- Desktop: TABLE -->
+      <table class="standings standings-table">
+        <thead>
+          <tr>
+            <th>#</th><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th>
+            <th>GF</th><th>GC</th><th>DG</th><th>Pts</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
 
-  <!-- Mobile: CARDS -->
-  <ol class="standings-cards">
-    <li class="standing-card is-leader">
-    </li>
-    <li class="standing-card">
-    </li>
-  </ol>
-</section>
+      <!-- Mobile: CARDS -->
+      <ol class="standings-cards">
+        <li class="standing-card is-leader">
+        </li>
+        <li class="standing-card">
+        </li>
+      </ol>
+    </section>
 
-<!-- ===================== CALENDARIO ===================== -->
-<header class="section-head" id="matches">
-  <h1 class="section-title">Calendario de Partidos</h1>
-  <p class="section-sub">Fecha, hora, estadio y VS con logos.</p>
-</header>
-<!-- FILTROS DE CALENDARIO -->
+    <!-- ===================== CALENDARIO ===================== -->
+    <header class="section-head" id="matches">
+      <h1 class="section-title">Calendario de Partidos</h1>
+      <p class="section-sub">Fecha, hora, estadio y VS con logos.</p>
+    </header>
+
+    <!-- FILTROS DE CALENDARIO -->
     <section class="calendar-filters" style="margin: 24px 0 18px; display: flex; flex-wrap: wrap; gap: 18px; align-items: center;">
       <label>
         Equipo:
@@ -224,156 +225,146 @@
         </span>
       </label>
     </section>
-<section class="calendar-wrap">
-  <!-- Desktop: TABLE -->
-  <table class="calendar calendar-table">
-    <thead>
-      <tr>
-        <th>Fecha</th>
-        <th>Hora</th>
-        <th>Partido</th>
-        <th>Estadio</th>
-        <th>Resultado</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr data-home="Eagles" data-away="Ravens" data-score="2-1">
-        <td>15 Jun</td>
-        <td>3:00 PM</td>
-        <td class="versus">
-          <span class="team">
-            <img src="img/eagles.png" alt="Eagles" class="logo"> <b>Eagles</b>
-          </span>
-          <span class="vs">VS</span>
-          <span class="team">
-            <img src="img/ravens.png" alt="Ravens" class="logo"> <b>Ravens</b>
-          </span>
-        </td>
-        <td>Estadio A</td>
-        <td class="score">2–1</td>
-      </tr>
-      <tr data-home="United" data-away="Sharks">
-        <td>17 Jun</td>
-        <td>5:30 PM</td>
-        <td class="versus">
-          <span class="team">
-            <img src="img/united.png" alt="United" class="logo"> <b>United</b>
-          </span>
-          <span class="vs">VS</span>
-          <span class="team">
-            <img src="img/sharks.png" alt="Sharks" class="logo"> <b>Sharks</b>
-          </span>
-        </td>
-        <td>Estadio B</td>
-        <td class="score pending">—</td>
-      </tr>
-    </tbody>
-  </table>
+    <section class="calendar-wrap">
+      <!-- Desktop: TABLE -->
+      <table class="calendar calendar-table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Partido</th>
+            <th>Estadio</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-home="Eagles" data-away="Ravens" data-score="2-1">
+            <td>15 Jun</td>
+            <td>3:00 PM</td>
+            <td class="versus">
+              <span class="team">
+                <img src="img/eagles.png" alt="Eagles" class="logo"> <b>Eagles</b>
+              </span>
+              <span class="vs">VS</span>
+              <span class="team">
+                <img src="img/ravens.png" alt="Ravens" class="logo"> <b>Ravens</b>
+              </span>
+            </td>
+            <td>Estadio A</td>
+            <td class="score">2–1</td>
+          </tr>
+          <tr data-home="United" data-away="Sharks">
+            <td>17 Jun</td>
+            <td>5:30 PM</td>
+            <td class="versus">
+              <span class="team">
+                <img src="img/united.png" alt="United" class="logo"> <b>United</b>
+              </span>
+              <span class="vs">VS</span>
+              <span class="team">
+                <img src="img/sharks.png" alt="Sharks" class="logo"> <b>Sharks</b>
+              </span>
+            </td>
+            <td>Estadio B</td>
+            <td class="score pending">—</td>
+          </tr>
+        </tbody>
+      </table>
 
-  <!-- Mobile: CARDS (render dinámico) -->
-  <div class="calendar-cards">
-    <article class="match-card" data-home="Eagles" data-away="Ravens" data-score="2-1">
-      <div class="match-meta">
-        <span class="date">15 Jun</span> · <span class="time">3:00 PM</span>
+      <!-- Mobile: CARDS (render dinámico) -->
+      <div class="calendar-cards">
+        <article class="match-card" data-home="Eagles" data-away="Ravens" data-score="2-1">
+          <div class="match-meta">
+            <span class="date">15 Jun</span> · <span class="time">3:00 PM</span>
+          </div>
+          <div class="match-versus">
+            <span class="team">
+              <img src="img/eagles.png" alt="Eagles" class="logo">
+              <b class="name">Eagles</b>
+            </span>
+            <span class="vs">VS</span>
+            <span class="team">
+              <img src="img/ravens.png" alt="Ravens" class="logo">
+              <b class="name">Ravens</b>
+            </span>
+          </div>
+          <div class="match-extra">
+            <span class="chip stadium">Estadio A</span>
+            <span class="chip score">2–1</span>
+          </div>
+        </article>
+
+        <article class="match-card" data-home="United" data-away="Sharks">
+          <div class="match-meta">
+            <span class="date">17 Jun</span> · <span class="time">5:30 PM</span>
+          </div>
+          <div class="match-versus">
+            <span class="team">
+              <img src="img/united.png" alt="United" class="logo">
+              <b class="name">United</b>
+            </span>
+            <span class="vs">VS</span>
+            <span class="team">
+              <img src="img/sharks.png" alt="Sharks" class="logo">
+              <b class="name">Sharks</b>
+            </span>
+          </div>
+          <div class="match-extra">
+            <span class="chip stadium">Estadio B</span>
+            <span class="chip score pending">—</span>
+          </div>
+        </article>
+
       </div>
-      <div class="match-versus">
-        <span class="team">
-          <img src="img/eagles.png" alt="Eagles" class="logo">
-          <b class="name">Eagles</b>
-        </span>
-        <span class="vs">VS</span>
-        <span class="team">
-          <img src="img/ravens.png" alt="Ravens" class="logo">
-          <b class="name">Ravens</b>
-        </span>
+    </section>
+
+    <!-- ===================== GOLEADORES (Top del torneo) ===================== -->
+    <header class="section-head" id="goal-scorers">
+      <h1 class="section-title">Goleadores</h1>
+      <p class="section-sub">Top 8 goleadores del torneo.</p>
+      </header>
+    <section class="scorers" id="tournament-scorers" hidden>
+      <div class="scorers-top" id="t-scorers-top"></div>
+      <ol class="scorers-list" id="t-scorers-list"></ol>
+      <div class="scorers-empty" id="t-scorers-empty" hidden>No hay goles registrados aún.</div>
+    </section>
+
+    <!-- ===================== ESTADÍSTICAS ===================== -->
+    <header class="section-head" id="stats">
+      <h1 class="section-title">Estadísticas</h1>
+      <p class="section-sub">Tarjetas y valla menos vencida.</p>
+    </header>
+    <section class="stats-wrap">
+      <!-- Tabs -->
+      <div class="stats-tabs" role="tablist" aria-label="Tabs estadísticas">
+        <button class="tab is-active" data-tab="cards">Tarjetas</button>
+        <button class="tab" data-tab="keepers">Menos valla vencida</button>
       </div>
-      <div class="match-extra">
-        <span class="chip stadium">Estadio A</span>
-        <span class="chip score">2–1</span>
+
+      <!-- Panel: Goleadores eliminado (sección dedicada arriba) -->
+
+      <!-- Panel: Tarjetas -->
+      <div class="stats-panel is-active" id="panel-cards" role="tabpanel">
+        <table class="stats-table">
+          <thead>
+            <tr><th>#</th><th>Jugador</th><th>Equipo</th><th>Amarillas</th><th>Rojas</th></tr>
+          </thead>
+          <tbody id="cards-tbody"></tbody>
+        </table>
+        <ol class="stats-cards" id="cards-cards"></ol>
       </div>
-    </article>
 
-    <article class="match-card" data-home="United" data-away="Sharks">
-      <div class="match-meta">
-        <span class="date">17 Jun</span> · <span class="time">5:30 PM</span>
+      <!-- Panel: Menos valla vencida (Top 10 equipos con menos GC) -->
+      <div class="stats-panel" id="panel-keepers" role="tabpanel" hidden>
+        <table class="stats-table">
+          <thead>
+            <tr><th>#</th><th>Equipo</th><th>Goles en contra</th></tr>
+          </thead>
+          <tbody id="keepers-tbody"></tbody>
+        </table>
+        <ol class="stats-cards" id="keepers-cards"></ol>
       </div>
-      <div class="match-versus">
-        <span class="team">
-          <img src="img/united.png" alt="United" class="logo">
-          <b class="name">United</b>
-        </span>
-        <span class="vs">VS</span>
-        <span class="team">
-          <img src="img/sharks.png" alt="Sharks" class="logo">
-          <b class="name">Sharks</b>
-        </span>
-      </div>
-      <div class="match-extra">
-        <span class="chip stadium">Estadio B</span>
-        <span class="chip score pending">—</span>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-
-
-<!-- ===================== GOLEADORES (Top del torneo) ===================== -->
-<header class="section-head" id="panel-scorers">
-  <h1 class="section-title">Goleadores</h1>
-  <p class="section-sub">Top 8 goleadores del torneo.</p>
-  </header>
-<section class="scorers" id="tournament-scorers" hidden>
-  <div class="scorers-top" id="t-scorers-top"></div>
-  <ol class="scorers-list" id="t-scorers-list"></ol>
-  <div class="scorers-empty" id="t-scorers-empty" hidden>No hay goles registrados aún.</div>
-</section>
-
-<!-- ===================== ESTADÍSTICAS ===================== -->
-<header class="section-head" id="stats">
-  <h1 class="section-title">Estadísticas</h1>
-  <p class="section-sub">Tarjetas y valla menos vencida.</p>
-</header>
-<section class="stats-wrap">
-  <!-- Tabs -->
-  <div class="stats-tabs" role="tablist" aria-label="Tabs estadísticas">
-    <button class="tab is-active" data-tab="cards">Tarjetas</button>
-    <button class="tab" data-tab="keepers">Valla menos vencida</button>
-  </div>
-
-  <!-- Panel: Goleadores eliminado (sección dedicada arriba) -->
-
-  <!-- Panel: Tarjetas -->
-  <div class="stats-panel is-active" id="panel-cards" role="tabpanel">
-    <table class="stats-table">
-      <thead>
-        <tr><th>#</th><th>Jugador</th><th>Equipo</th><th>Amarillas</th><th>Rojas</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>P. Molina</td><td><img src="img/sharks.png" class="logo sm" alt=""> Sharks</td><td>4</td><td>1</td></tr>
-        <tr><td>2</td><td>C. Pérez</td><td><img src="img/ravens.png" class="logo sm" alt=""> Ravens</td><td>3</td><td>0</td></tr>
-        <tr><td>3</td><td>D. Arias</td><td><img src="img/eagles.png" class="logo sm" alt=""> Eagles</td><td>2</td><td>0</td></tr>
-      </tbody>
-    </table>
-    <ol class="stats-cards">
-      <li class="stat-card"><span class="rank">1</span><span class="name">P. Molina</span><span class="team"><img src="img/sharks.png" class="logo sm" alt=""> Sharks</span><span class="value chip">4A · 1R</span></li>
-      <li class="stat-card"><span class="rank">2</span><span class="name">C. Pérez</span><span class="team"><img src="img/ravens.png" class="logo sm" alt=""> Ravens</span><span class="value chip">3A · 0R</span></li>
-      <li class="stat-card"><span class="rank">3</span><span class="name">D. Arias</span><span class="team"><img src="img/eagles.png" class="logo sm" alt=""> Eagles</span><span class="value chip">2A · 0R</span></li>
-    </ol>
-  </div>
-
-  <!-- Panel: Menos valla vencida (Top 10 equipos con menos GC) -->
-  <div class="stats-panel" id="panel-keepers" role="tabpanel" hidden>
-    <table class="stats-table">
-      <thead>
-        <tr><th>#</th><th>Equipo</th><th>Goles en contra</th></tr>
-      </thead>
-      <tbody id="keepers-tbody"></tbody>
-    </table>
-    <ol class="stats-cards" id="keepers-cards"></ol>
-  </div>
-</section>
+    </section>
 
 
 <!-- ===================== GALERÍA ===================== -->
@@ -463,3 +454,7 @@
   
 </body>
 </html>
+
+
+
+
