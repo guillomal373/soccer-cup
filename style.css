@@ -229,6 +229,11 @@
   align-items: center;
   gap: 10px;
 }
+.calendar-filters .date-filter .date-range{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
 .calendar-filters select:focus,
 .calendar-filters input[type="date"]:focus {
   border-color: var(--chip);
@@ -245,6 +250,19 @@
   }
   .calendar-filters label {
     font-size: 14px;
+  }
+  /* Date range: stack in small screens */
+  .calendar-filters .date-filter .date-range{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+  .calendar-filters .date-filter input[type="date"]{
+    width: 100%;
+  }
+  .calendar-filters .date-filter .date-range .sep{
+    display: none; /* ocultar el separador en móvil */
   }
   /* Date range: stack in small screens */
   .calendar-filters .date-filter .date-range{
