@@ -593,6 +593,16 @@
       .metrics{grid-template-columns: repeat(2, 1fr);}
     }
 
+    /* Menú superior: reducir fuente y espacios en responsive */
+    @media (max-width: 760px){
+      .nav ul{ gap:18px; }
+      .nav a{ font-size:14px; }
+    }
+    @media (max-width: 600px){
+      .nav ul{ gap:12px; }
+      .nav a{ font-size:13px; }
+    }
+
     /* <= 600px: todo en una columna cómoda */
     @media (max-width: 600px){
       :root{ --pad:20px; }
